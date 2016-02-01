@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8595DDF-B9FB-46F1-B64A-076BEC045236}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Basics</RootNamespace>
+    <AssemblyName>Basics</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>MeinSchlüssel.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-ohne-Trace|AnyCPU'">
+    <OutputPath>bin\Release-ohne-Trace\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DirTree, Version=2.0.1.0, Culture=neutral, PublicKeyToken=65a6fe3e6295e9ab, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DirTree.2.0.1.0\lib\net45\DirTree.dll</HintPath>
+    </Reference>
+    <Reference Include="mko.Algo, Version=1.1.3.0, Culture=neutral, PublicKeyToken=f4d93f46e53e0656, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\mko.Algo.1.1.3.0\lib\net45\mko.Algo.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LISP.cs" />
+    <Compile Include="LongExtensions.cs" />
+    <Compile Include="NumberTheory.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="PointClonbar.cs" />
+    <Compile Include="PointVergleicher.cs" />
+    <Compile Include="PointWithProperties.cs" />
+    <Compile Include="Preis.cs" />
+    <Compile Include="PriceDbl.cs" />
+    <Compile Include="PriceDblCalc.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rennwagen.cs" />
+    <Compile Include="SPoint.cs" />
+    <Compile Include="Zahlensysteme.cs" />
+    <Compile Include="_01_Grundbausteine\_01_02_Namespaces.cs" />
+    <Compile Include="_01_Grundbausteine\_01_01_Blockstruktur.cs" />
+    <Compile Include="_01_Grundbausteine\_01_03_Ausdruecke.cs" />
+    <Compile Include="_01_Grundbausteine\_01_04_Operatoren.cs" />
+    <Compile Include="_01_Grundbausteine\_01_05_Variablen_Static_Const.cs" />
+    <Compile Include="_01_Grundbausteine\_01_07_Unterprogramme_und_Funktionen.cs" />
+    <Compile Include="_01_Grundbausteine\_01_08_Delegates_und_Lambda.cs" />
+    <Compile Include="_01_Grundbausteine\_01_10_GenerischeTypen.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\ArrayInt.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\ArrayGenerisch.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\Enumeratoren.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\IBasic.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\IDerived.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\ImplementsIBasic.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\ImplementsIDerived.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\Primlist.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\PrimList.Enumerator.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\PrimSet.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\ProcessInterfaces.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\_02_01_Arrays.cs" />
+    <Compile Include="_03_Strings\_03_01_TryParse.cs" />
+    <Compile Include="_04_Objektorientiert\Auto.cs" />
+    <Compile Include="_04_Objektorientiert\Benzinauto.cs" />
+    <Compile Include="_04_Objektorientiert\Dieselauto.cs" />
+    <Compile Include="_04_Objektorientiert\Galaxie.cs" />
+    <Compile Include="_04_Objektorientiert\Himmelskörper.cs" />
+    <Compile Include="_04_Objektorientiert\JpegCounter.cs" />
+    <Compile Include="_04_Objektorientiert\LKW.cs" />
+    <Compile Include="_04_Objektorientiert\Romzahl.cs" />
+    <Compile Include="_04_Objektorientiert\Stern.cs" />
+    <Compile Include="_04_Objektorientiert\Stoppuhr.cs" />
+    <Compile Include="_04_Objektorientiert\Wasserhahn.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="ClassDiagram4.cd" />
+    <None Include="ClassDiagram5.cd" />
+    <None Include="ClassDiagram6.cd" />
+    <None Include="ClassDiagram7.cd" />
+    <None Include="MeinSchlüssel.snk" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

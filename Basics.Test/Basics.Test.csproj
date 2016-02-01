@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD694D07-DAE1-4648-8136-F416A479B26C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Basics.Test</RootNamespace>
+    <AssemblyName>Basics.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-ohne-Trace|AnyCPU'">
+    <OutputPath>bin\Release-ohne-Trace\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DirTree, Version=2.0.1.0, Culture=neutral, PublicKeyToken=65a6fe3e6295e9ab, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DirTree.2.0.1.0\lib\net45\DirTree.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="mko, Version=7.1.3.0, Culture=neutral, PublicKeyToken=f4d93f46e53e0656, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\mko.7.1.3.0\lib\net45\mko.dll</HintPath>
+    </Reference>
+    <Reference Include="mko.Algo, Version=1.1.3.0, Culture=neutral, PublicKeyToken=f4d93f46e53e0656, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\mko.Algo.1.1.3.0\lib\net45\mko.Algo.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="_01_Grundbausteine\UnitTest1.cs" />
+    <Compile Include="_01_Grundbausteine\_01_11_GenerischeTypen.cs" />
+    <Compile Include="_01_Grundbausteine\_01_05_01_DatenstrukturenTests.cs" />
+    <Compile Include="_01_Grundbausteine\_01_10_Char_String_DateTime.cs" />
+    <Compile Include="_01_Grundbausteine\_01_09_DateTimeTests.cs" />
+    <Compile Include="_01_Grundbausteine\_01_00_PreprozTest.cs" />
+    <Compile Include="_01_Grundbausteine\_01_08_Delegates_und_LambdaTests.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\_02_02_00_Interfaces.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\_02_05_Enumeratoren.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\_02_03_ErweiterungsmethodenTests.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\_02_04_Linq_LISP.cs" />
+    <Compile Include="_01_Grundbausteine\_01_07_Unterprogramme_und_FunktionenTests.cs" />
+    <Compile Include="_01_Grundbausteine\_01_06_ReferenztypenTests.cs" />
+    <Compile Include="_01_Grundbausteine\_01_01_BloeckeTests.cs" />
+    <Compile Include="_01_Grundbausteine\_01_05_VariablenTests.cs" />
+    <Compile Include="_01_Grundbausteine\_01_04_Operatoren_Tests.cs" />
+    <Compile Include="_01_Grundbausteine\_01_03_AusdrueckeTests.cs" />
+    <Compile Include="_01_Grundbausteine\_01_02_NamespacesTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\_02_02_CollectionsTests.cs" />
+    <Compile Include="_02_Arrays_Collections_und_Schnittstellen\_02_01_ArraysTests.cs" />
+    <Compile Include="_03_StringsTest\_03_04_Elementare_Stringfunktionen.cs" />
+    <Compile Include="_03_StringsTest\_03_03_RegExTests.cs" />
+    <Compile Include="_03_StringsTest\_03_02_CharTests.cs" />
+    <Compile Include="_03_StringsTest\_03_01_TryParseTests.cs" />
+    <Compile Include="_04_Objektorientiert\_04_07_Fehlerbehandlung.cs" />
+    <Compile Include="_04_Objektorientiert\_04_06_Polymorphismus_anwenden.cs" />
+    <Compile Include="_04_Objektorientiert\_04_02_Konstruktion_Destruktion.cs" />
+    <Compile Include="_04_Objektorientiert\_04_05_Vererbung_und_PolymorphismusTests.cs" />
+    <Compile Include="_04_Objektorientiert\_04_01_Klassen_und_Objekte.cs" />
+    <Compile Include="_04_Objektorientiert\_04_04_EventsTests.cs" />
+    <Compile Include="_04_Objektorientiert\_04_03_Objektinitialisierer_AnonymeTypenTests.cs" />
+    <Compile Include="_04_Objektorientiert\_04_08_Dynamische_TypenTests.cs" />
+    <Compile Include="_04_Objektorientiert\_04_09_OperatorueberladungTests.cs" />
+    <Compile Include="_05_Multithreading\_05_01_ThreadsMitDelegatesTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Basics\Basics.csproj">
+      <Project>{a8595ddf-b9fb-46f1-b64a-076bec045236}</Project>
+      <Name>Basics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
