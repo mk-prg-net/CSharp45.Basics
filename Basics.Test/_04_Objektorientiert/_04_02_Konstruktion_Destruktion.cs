@@ -30,12 +30,19 @@ namespace Basics.Test._04_Objektorientiert
                 Debug.WriteLine(Silberpfeil.Marke);
             } // Hier wird automatisch Dispose aufgerufen
 
+            // Im unsing- Block können nur Objekte instanziiert werden, deren Klasse
+            // IDisposable implementieren
+            //using (var Zentrum = new Point(1, 2))
+            //{
+
+            //}
+
             try
             {
                 var Silberpfeil2 = new Auto("Mercedes", "Rennauto2");
                 //using(var heute = DateTime.Now)
                 using (var fredVollgas = new Auto("Ferrari", "Testarossa"))
-                using(var KunoTunichtGut = new Auto("Alpha", "Romeo"))
+                using (var KunoTunichtGut = new Auto("Alpha", "Romeo"))
                 {
                     Debug.WriteLine(Silberpfeil2.Marke);
                     // Plötzlich passiert ein Fehler
@@ -105,7 +112,7 @@ namespace Basics.Test._04_Objektorientiert
                 //IDisposable dsp = FredVollgas;
                 //dsp.Dispose();
             }
-        Sprungmarke: ;
+            Sprungmarke:;
         }
     }
 }

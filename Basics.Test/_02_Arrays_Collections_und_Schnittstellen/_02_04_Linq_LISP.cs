@@ -215,5 +215,23 @@ namespace Basics.Test.LISP
 
 
         }
+
+
+        [TestMethod]
+        public void _02_03_03_Linq_ErsetzenTest()
+        {
+            var prim = new int[]{ 2, 3, 5, 7, 11, 13, 17, 23 };
+
+            var Ersetzte11 = prim.Select(r =>
+            {
+                if (r == 11)
+                    return 99;
+                else
+                    return r;
+            }).ToArray();
+
+
+
+        }
     }
 }

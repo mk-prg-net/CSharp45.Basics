@@ -19,7 +19,7 @@ namespace Basics
         {
             return z % 2 == 1;
         }
-        
+
         /// <summary>
         /// Liefert true, wenn z gerade
         /// </summary>

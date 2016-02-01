@@ -17,6 +17,11 @@ namespace Basics._04_Objektorientiert
 
             Galaxie Milchstrasse = new Galaxie(new Stern[] { Sonne, Beteigeuze });
 
+            // Upcast (Cast in den Typ der Basisklasse) ist implizit möglich
+            Himmelskörper h = Sonne;
+
+            // Downcast muss immer mit expliziter Typkonvertierung erfolgen
+            Stern einStern = (Stern)h;
 
             // Demo Polymorphismus
             Himmelskörper[] Katalog = { Sonne, Beteigeuze, Milchstrasse };

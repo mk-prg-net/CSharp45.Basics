@@ -43,7 +43,7 @@ namespace Basics.Test._02_Arrays_Collections_und_Schnittstellen
 
             // Klassisch
             Assert.IsTrue(LongExtensions.IsOdd(l1));
-
+            
             // Dank Erweiterungsmethode syntaktisch möglich
             Assert.IsTrue(l1.IsOdd());
             Assert.IsFalse(l1.IsEven());            

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Basics._04_Objektorientiert.Galaxie" Collapsed="true">
-    <Position X="0.5" Y="5.75" Width="1.5" />
+  <Class Name="Basics._04_Objektorientiert.Galaxie">
+    <Position X="0.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>_04_Objektorientiert\Galaxie.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Basics._04_Objektorientiert.Himmelskörper" Collapsed="true">
-    <Position X="1.75" Y="4.5" Width="1.5" />
+  <Class Name="Basics._04_Objektorientiert.Himmelskörper">
+    <Position X="1.5" Y="4.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AICAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>_04_Objektorientiert\Himmelskörper.cs</FileName>
@@ -21,8 +21,8 @@
       <FileName>_04_Objektorientiert\JpegCounter.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Basics._04_Objektorientiert.Stern" Collapsed="true">
-    <Position X="2.75" Y="5.75" Width="1.5" />
+  <Class Name="Basics._04_Objektorientiert.Stern">
+    <Position X="4" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>_04_Objektorientiert\Stern.cs</FileName>

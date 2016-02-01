@@ -1,5 +1,6 @@
 ﻿// Eine Preprozessorkonstante deklarieren
 #define MeinePreProzKonstante
+// #define DEBUG
 
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -14,8 +15,8 @@ namespace Basics.Test._01_Grundbausteine
         public void _01_00_PreProzTest1()
         {
             // Zusätzliche Medien zur Aufzeichnung der Traceindfos definiert
-            var txtList = new TextWriterTraceListener(@"C:\Users\Schulung\Documents\Visual Studio 2013\Projects\Trace.txt");
-            Debug.Listeners.Add(txtList);
+            //var txtList = new TextWriterTraceListener(@"Trace.txt");
+            //Debug.Listeners.Add(txtList);
             //Trace.Listeners.Add(txtList);
 
             //Debug.AutoFlush = true;
@@ -24,7 +25,7 @@ namespace Basics.Test._01_Grundbausteine
             // Traceswitch zur Steuerung der Informationsflut
 
             var ts = new System.Diagnostics.TraceSwitch("MySwitch", "...");
-            ts.Level = TraceLevel.Info;
+            //ts.Level = TraceLevel.Info;
 
             var ts2 = new System.Diagnostics.TraceSwitch("MySecoundSwitch", "...");
 
