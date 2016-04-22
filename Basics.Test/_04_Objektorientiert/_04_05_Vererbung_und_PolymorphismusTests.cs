@@ -9,6 +9,12 @@ namespace Basics._04_Objektorientiert
     [TestClass]
     public class _04_PolymorphismusTests
     {
+        [ClassInitialize]
+        public void ClassInit(TestContext ctx)
+        {
+            mko.Newton.Init.Do();
+        }
+
         [TestMethod]
         public void HimmeslkoerperTest()
         {
@@ -29,7 +35,7 @@ namespace Basics._04_Objektorientiert
 
             foreach (var himmelkoerper in Katalog)
             {
-                Debug.WriteLine(himmelkoerper.BerechneMasseAbstract());
+                Debug.WriteLine(himmelkoerper.BerechneMasseInKg());
             }
 
         }

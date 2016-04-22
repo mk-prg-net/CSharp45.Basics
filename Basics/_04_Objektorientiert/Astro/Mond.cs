@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Basics._04_Objektorientiert.Astro
+{
+    public abstract class Mond : Himmelskörper
+    {
+        /// <summary>
+        /// 1:n Beziehung zwischen Planet und seinen Monden
+        /// Verweis auf den Plaeten, den dieser Mond umkreist
+        /// </summary>
+        public abstract Planet Planet { get; }
+    }
+}
