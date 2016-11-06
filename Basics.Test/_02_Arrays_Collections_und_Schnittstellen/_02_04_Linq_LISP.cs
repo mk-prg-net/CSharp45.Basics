@@ -178,40 +178,37 @@ namespace Basics.Test.LISP
 
 
             // Linq mit komplexeren Daten
-            Preis[] Preisliste = {
-                                     new Preis(5,99),
-                                     new Preis(3,49),
-                                     new Preis(1,29),
-                                     new Preis(1,99),
-                                     new Preis(3,21),
-                                     new Preis(0,99),
-                                     new Preis(4,49)
+            PriceDbl[] Preisliste = {
+                                     new PriceDbl(5.99, CurrencySymbols.EUR),
+                                     new PriceDbl(3.49, CurrencySymbols.USD),
+                                     new PriceDbl(1.29, CurrencySymbols.SFr),
+                                     new PriceDbl(1.99, CurrencySymbols.EUR),
+                                     new PriceDbl(3.21, CurrencySymbols.EUR),
+                                     new PriceDbl(0.99, CurrencySymbols.USD),
+                                     new PriceDbl(4.49, CurrencySymbols.SFr)
                                  };
 
-            int x = 99;
-            Func<Preis, int> dgBerechnePreis = preis => preis.GetEuro() * 100 + preis.GetCent();
+            var Preisliste_sortiert = Preisliste.OrderBy(p => p.ToUSD());
+            var Preisliste_sortiert_desc = Preisliste.OrderByDescending(p => p.ToUSD());
 
-            var Preisliste_sortiert = Preisliste.OrderBy(dgBerechnePreis);
-            var Preisliste_sortiert_desc = Preisliste.OrderByDescending(preis => preis.GetEuro() * 100 + preis.GetCent());
-
-            var Preisliste_gefiltert_und_sortiert = Preisliste.Where(preis => preis.GetEuro() > 1 && preis.GetEuro() < 5)
-                                                              .OrderBy(preis => preis.GetEuro() * 100 + preis.GetCent())
+            var Preisliste_gefiltert_und_sortiert = Preisliste.Where(p => p.ToUSD() >= 1.0 && p.ToUSD() <= 5.0)
+                                                              .OrderBy(p => p.ToUSD())
                                                               .ToArray();
             // Sortieren nach mehreren Eigenschaften/Kriterien
-            var Preisliste_sortiert_nach_euro_und_cent = Preisliste.OrderBy(preis => preis.GetEuro())
-                                                                   .ThenBy(preis => preis.GetCent())
+            var Preisliste_sortiert_nach_euro_und_cent = Preisliste.OrderBy(p => p.CurSym)
+                                                                   .ThenBy(p => p.Value)
                                                                    .ToArray();
 
-            var Preisliste_sortiert_nach_euro_und_cent2 = Preisliste.OrderBy(preis => preis.GetEuro())
-                                                                    .ThenByDescending(preis => preis.GetCent())
-                                                                    .ToArray();
+            var Preisliste_sortiert_nach_euro_und_cent2 = Preisliste.OrderBy(p => p.CurSym)
+                                                                   .ThenByDescending(p => p.Value)
+                                                                   .ToArray();
 
 
 
-            var Preisliste_in_Dollar_gefiltert_und_sortiert = Preisliste.Where(preis => preis.GetEuro() > 1 && preis.GetEuro() < 5)
-                                              .OrderBy(dgBerechnePreis)
-                                              .Select(preis => (((double)preis.GetEuro() * 100 + preis.GetCent()) / 100.0) * 1.32)
-                                              .ToArray();
+            var Preisliste_in_Euro_gefiltert_und_sortiert = Preisliste.Where(p => p.ToUSD() >= 1.0 && p.ToUSD() <= 5.0)
+                                                                        .OrderBy(p => p.ToUSD())
+                                                                        .Select(p => p.ToUSD() * 0.89)
+                                                                        .ToArray();
 
 
         }

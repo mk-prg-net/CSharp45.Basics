@@ -33,10 +33,19 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>MeinSchlüssel.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>mk-prg-net.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-ohne-Trace|AnyCPU'">
     <OutputPath>bin\Release-ohne-Trace\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_mit_unsicherem_Code|AnyCPU'">
+    <OutputPath>bin\Release_mit_unsicherem_Code\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -105,17 +114,25 @@
     <Compile Include="_02_Arrays_Collections_und_Schnittstellen\ProcessInterfaces.cs" />
     <Compile Include="_02_Arrays_Collections_und_Schnittstellen\_02_01_Arrays.cs" />
     <Compile Include="_03_Strings\_03_01_TryParse.cs" />
+    <Compile Include="_04_Objektorientiert\Astro\BerechneGalaxiemasseAusDenSternen.cs" />
+    <Compile Include="_04_Objektorientiert\Astro\BerechneGalaxiemasseAusDenSternenUndPlaneten.cs" />
+    <Compile Include="_04_Objektorientiert\Astro\GalaxieWithStrategie.cs" />
+    <Compile Include="_04_Objektorientiert\Astro\inMem\GalaxieWithStrategie.cs" />
+    <Compile Include="_04_Objektorientiert\Astro\inMem\Planet.cs" />
+    <Compile Include="_04_Objektorientiert\Astro\IStrategieBerechneMasseGalaxie.cs" />
+    <Compile Include="_04_Objektorientiert\Astro\IGalaxie.cs" />
     <Compile Include="_04_Objektorientiert\Astro\inMem\Galaxie.cs" />
     <Compile Include="_04_Objektorientiert\Astro\inMem\Stern.cs" />
+    <Compile Include="_04_Objektorientiert\Astro\inMem\Universum.cs" />
     <Compile Include="_04_Objektorientiert\Astro\ISpektralklasse.cs" />
-    <Compile Include="_04_Objektorientiert\Astro\Mond.cs" />
-    <Compile Include="_04_Objektorientiert\Astro\Planet.cs" />
+    <Compile Include="_04_Objektorientiert\Astro\IPlanet.cs" />
+    <Compile Include="_04_Objektorientiert\Astro\IUniversum.cs" />
     <Compile Include="_04_Objektorientiert\Astro\Spektralklasse.cs" />
     <Compile Include="_04_Objektorientiert\Auto.cs" />
     <Compile Include="_04_Objektorientiert\Benzinauto.cs" />
     <Compile Include="_04_Objektorientiert\Dieselauto.cs" />
     <Compile Include="_04_Objektorientiert\Astro\Galaxie.cs" />
-    <Compile Include="_04_Objektorientiert\Astro\Himmelskörper.cs" />
+    <Compile Include="_04_Objektorientiert\Astro\IHimmelskörper.cs" />
     <Compile Include="_04_Objektorientiert\JpegCounter.cs" />
     <Compile Include="_04_Objektorientiert\LKW.cs" />
     <Compile Include="_04_Objektorientiert\Romzahl.cs" />
@@ -124,14 +141,11 @@
     <Compile Include="_04_Objektorientiert\Wasserhahn.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
-    <None Include="ClassDiagram3.cd" />
-    <None Include="ClassDiagram4.cd" />
-    <None Include="ClassDiagram5.cd" />
-    <None Include="ClassDiagram6.cd" />
-    <None Include="ClassDiagram7.cd" />
+    <None Include="AutobahnClassDiagram.cd" />
+    <None Include="Astro.cd" />
+    <None Include="Astro2.cd" />
     <None Include="MeinSchlüssel.snk" />
+    <None Include="mk-prg-net.snk" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

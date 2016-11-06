@@ -9,21 +9,12 @@ namespace Basics._04_Objektorientiert.Astro.inMem
     public class Stern : Astro.Stern
     {
 
-
-
-        public override ISpektralklasse Spektralklasse
+        internal Stern(string Name, ISpektralklasse Spektralklasse, double Masse_in_Sonnenmassen, IGalaxie Heimatgalaxie)
         {
-            get { throw new NotImplementedException(); }
-        }
-
-        public override Astro.Galaxie Heimatgalaxie
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        public override IEnumerable<Planet> Planetensystem
-        {
-            get { throw new NotImplementedException(); }
+            _Name = Name;
+            _Spektralklasse = Spektralklasse;
+            _Galaxie = Heimatgalaxie;
+            _Masse_in_Sonnenmassen = Masse_in_Sonnenmassen;
         }
 
         public override string Name
@@ -32,9 +23,43 @@ namespace Basics._04_Objektorientiert.Astro.inMem
         }
         string _Name;
 
-        protected override double BerechneMasseInKg()
+        public override double Masse_in_Sonnenmassen
         {
-            throw new NotImplementedException();
+            get { return _Masse_in_Sonnenmassen; }
         }
+        double _Masse_in_Sonnenmassen;
+
+        public override ISpektralklasse Spektralklasse
+        {
+            get { 
+                return _Spektralklasse; 
+            }
+        }
+        ISpektralklasse _Spektralklasse;
+
+
+        public override IEnumerable<IPlanet> Planetensystem
+        {
+            get {
+                if (Universum.Instance.Planeten.Any(p => p.Zentralstern == this))
+                {
+                    return Universum.Instance.Planeten.Where(p => p.Zentralstern == this);
+                }
+                else
+                {
+                    return new IPlanet[] { };
+                }
+                
+            }
+        }
+
+
+        public override Astro.IGalaxie Heimatgalaxie
+        {
+            get { 
+                return _Galaxie; 
+            }
+        }
+        Astro.IGalaxie _Galaxie;
     }
 }

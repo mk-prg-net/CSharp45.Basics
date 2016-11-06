@@ -32,7 +32,15 @@ namespace Basics.Test._04_Objektorientiert
 
         static void up2()
         {
-            System.IO.FileStream fs = new System.IO.FileStream(@"C:\Fantasie.txt", System.IO.FileMode.Open);
+            try
+            {
+                System.IO.FileStream fs = new System.IO.FileStream(@"C:\Fantasie.txt", System.IO.FileMode.Open);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Catch Handeler von up2", ex);
+            }
+            
         }
 
         [TestMethod]
@@ -59,7 +67,7 @@ namespace Basics.Test._04_Objektorientiert
             //try
             //{
             //    up2();
-            //}            
+            //}
             //catch (Exception ex)
             //{
             //    Debug.WriteLine(ex.Message);

@@ -40,6 +40,11 @@ namespace Basics.Test._04_Objektorientiert
             // Eventhandler registrieren
             meineStoppuhr.ZeitlimitUeberschrittenEvent += MeinEventhandler;
 
+            // Das Schlüsselwort event in der Klassendeklaration von Stoppuhr schränkt die 
+            // öffentliche Schnittstelle des ZeitlimitUeberschrittenEvent- Delegate ein:
+            // Invoke kann über die Objektinstanz Stoppuhr nicht mehr aufgerufen werden.
+            //meineStoppuhr.ZeitlimitUeberschrittenEvent.Invoke(1, 1);
+
             // wg. dem Schlüsselwort event kann der Delegate nicht m,ehr über die Objektinstanz direkt aufgeufen werden
             //meineStoppuhr.ZeitlimitUeberschrittenEvent(1, 2);
 
@@ -49,11 +54,14 @@ namespace Basics.Test._04_Objektorientiert
 
             meineStoppuhr.Stopp();
 
+            Debug.WriteLine("Laufzeit1: " + meineStoppuhr.ZeitInMsEigenschaft);
+
             // Eventhandler wieder abkoppeln
             meineStoppuhr.ZeitlimitUeberschrittenEvent -= MeinEventhandler;
             // anderen ankoppeln
             meineStoppuhr.ZeitlimitUeberschrittenEvent += MeinAndererEventhandler;
 
+            meineStoppuhr.Reset();
             meineStoppuhr.Start();
 
             System.Threading.Thread.Sleep(2000);
@@ -61,14 +69,20 @@ namespace Basics.Test._04_Objektorientiert
             meineStoppuhr.Stopp();
 
 
-            // Beide Eventhandler ankoppeln
+            // Beide Eventhandler ankoppeln/registrieren
             meineStoppuhr.ZeitlimitUeberschrittenEvent += MeinEventhandler;
+            meineStoppuhr.ZeitlimitUeberschrittenEvent += MeinAndererEventhandler;
+            //meineStoppuhr.ZeitlimitUeberschrittenEvent = new Action<double, double>(MeinAndererEventhandler);
+            
 
             meineStoppuhr.Start();
 
             System.Threading.Thread.Sleep(2000);
 
             meineStoppuhr.Stopp();
+
+            // Eventhandler abkoppeln/deregistrieren
+            meineStoppuhr.ZeitlimitUeberschrittenEvent -= MeinAndererEventhandler;
 
 
 

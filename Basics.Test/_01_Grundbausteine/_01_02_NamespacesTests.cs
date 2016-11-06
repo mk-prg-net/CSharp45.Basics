@@ -11,6 +11,12 @@ using Milcharm = Basics._01_Grundbausteine.Universum.Milchstrasse.Spiralarme;
 // Aliasbezeichner für einen Datentyp
 using Milchkern = Basics._01_Grundbausteine.Universum.Milchstrasse.Galaxiekern.Schwarzes_Loch;
 
+//using Basics._01_Grundbausteine.Universum.Milchstrasse.Galaxiekern;
+using Basics._01_Grundbausteine.Universum.Andromeda.Galaxiekern;
+
+// Aliasbezeichner für Namensraum
+using Milchkerne = Basics._01_Grundbausteine.Universum.Milchstrasse.Galaxiekern;
+
 namespace Basics.Test
 //namespace Basics._01_Grundbausteine.Universum.Andromeda.Spiralarme
 {
@@ -24,7 +30,9 @@ namespace Basics.Test
             var blackHole = new Basics._01_Grundbausteine.Universum.Andromeda.Galaxiekern.Schwarzes_Loch();
 
             var blackHole2 = new Basics._01_Grundbausteine.Universum.Milchstrasse.Galaxiekern.Schwarzes_Loch();
-            
+
+            var blackhole2_1 = new Schwarzes_Loch();
+            var blackhole2_2 = new Milchkerne.Schwarzes_Loch();
 
             // Zugriff über kurzen Aliasnamen für Datentyp
             var blackHole3 = new Milchkern();

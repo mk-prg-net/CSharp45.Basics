@@ -12,7 +12,7 @@ namespace Basics._01_Grundbausteine
         public static Point GetPoint(int PointNumber)
         {
             var p = new Point();
-            // Hier erfolgt fiktiv ein Datenbasnkzugriff, der zur Nummer den zugehörigen Punkt holt
+            // Hier erfolgt fiktiv ein Datenbankzugriff, der zur Nummer den zugehörigen Punkt holt
             // ...
             p.X = PointNumber;
             p.Y = PointNumber * 100;
@@ -29,10 +29,10 @@ namespace Basics._01_Grundbausteine
         }
 
         // Demo von Defaultparametern
+        // Die folgende Funktion entspricht dem Desingpattern einer Klassenfabrik
         public static Point CreatePoint(double x = 99, double y = 99)
-        {
-            
-            //Point p;
+        {            
+            //Point p = new Point();
             //p.X = 9;
             //p.Y = 11;
             //return p;
@@ -158,6 +158,25 @@ namespace Basics._01_Grundbausteine
 
             return factor *_sum;
         }
+
+
+        /// <summary>
+        /// Klassenfabrik für Autos
+        /// </summary>
+        /// <param name="Markenname"></param>
+        /// <param name="Modell">Modellbezeichung für das Fahrzeug</param>
+        /// <param name="EntfernungVomStart">Entfernung von Stuttgart in km</param>
+        /// <param name="vStartInKmh"></param>
+        /// <returns></returns>
+        public static _04_Objektorientiert.Autobahn.Auto CreateAuto(
+            string Markenname, 
+            string Modell, 
+            double EntfernungVomStart = 0, 
+            double vStartInKmh = 0)
+        {
+            return new _04_Objektorientiert.Autobahn.Auto(Markenname, Modell, EntfernungVomStart, vStartInKmh);
+        }
+
 
     }
 }

@@ -17,7 +17,7 @@ namespace Basics._01_Grundbausteine
         {
 
             // Zugriff auf statische Member erfordern kein Objekt. Sie sind direkt der Klasse untergeordnet
-            _01_05_Variablen.id_static = 99;            
+            _01_05_Variablen.id_static = 99;
 
             // Alle nichtstatischen Member sind an Objekte der Klasse gebunden
             _01_05_Variablen EinObjekt = new _01_05_Variablen();
@@ -68,11 +68,11 @@ namespace Basics._01_Grundbausteine
             IchBinPrivat = 99;
         }
 
-       
+
 
         public static int MakeID()
-        {            
-            return id_static++;            
+        {
+            return id_static++;
         }
 
         internal int id_nonstatic = 0;
@@ -86,7 +86,7 @@ namespace Basics._01_Grundbausteine
         static _01_05_Variablen MeinStatischesObjekt = new _01_05_Variablen();
 
         public static int MakeID_mitStaticObjekt()
-        {            
+        {
             return ++MeinStatischesObjekt.id_nonstatic;
         }
 
@@ -150,32 +150,36 @@ namespace Basics._01_Grundbausteine
         public static double ConvertTo(double MesswertInMeter, LaengenEinheiten ZielEinheit)
         {
             //if (ZielEinheit == cm)
+            double zielwert = 0.0;
             if (ZielEinheit == LaengenEinheiten.cm)
             {
-                return 100.0 * MesswertInMeter;
+                zielwert = 100.0 * MesswertInMeter;
             }
-
-            if (ZielEinheit == LaengenEinheiten.dm)
+            else if (ZielEinheit == LaengenEinheiten.dm)
             {
-                return 10.0 * MesswertInMeter;
+                zielwert = 10.0 * MesswertInMeter;
             }
-
-            if (ZielEinheit == LaengenEinheiten.km)
+            else
             {
-                return 0.001 * MesswertInMeter;
+                zielwert = -1.0;
             }
 
-            if (ZielEinheit == LaengenEinheiten.m)
-            {
-                return 1.0 * MesswertInMeter;
-            }
+            //if (ZielEinheit == LaengenEinheiten.km)
+            //{
+            //    return 0.001 * MesswertInMeter;
+            //}
 
-            if (ZielEinheit == LaengenEinheiten.mm)
-            {
-                return 1000.0 * MesswertInMeter;
-            }
+            //if (ZielEinheit == LaengenEinheiten.m)
+            //{
+            //    return 1.0 * MesswertInMeter;
+            //}
 
-            return -1.0;
+            //if (ZielEinheit == LaengenEinheiten.mm)
+            //{
+            //    return 1000.0 * MesswertInMeter;
+            //}
+
+            return zielwert;
         }
 
         public static double ConvertTo2(double MesswertInMeter, LaengenEinheiten ZielEinheit)
@@ -191,26 +195,27 @@ namespace Basics._01_Grundbausteine
                     return 10.0 * MesswertInMeter;
 
 
-                    //if (ZielEinheit == LaengenEinheiten.km)
-                    //{
-                    //    return 0.001 * MesswertInMeter;
-                    //}
+                //if (ZielEinheit == LaengenEinheiten.km)
+                //{
+                //    return 0.001 * MesswertInMeter;
+                //}
 
-                    //if (ZielEinheit == LaengenEinheiten.m)
-                    //{
-                    //    return 1.0 * MesswertInMeter;
-                    //}
+                //if (ZielEinheit == LaengenEinheiten.m)
+                //{
+                //    return 1.0 * MesswertInMeter;
+                //}
 
-                    //if (ZielEinheit == LaengenEinheiten.mm)
-                    //{
-                    //    return 1000.0 * MesswertInMeter;
-                    //}
-                default : {
-                    return -1.0;
-                }
+                //if (ZielEinheit == LaengenEinheiten.mm)
+                //{
+                //    return 1000.0 * MesswertInMeter;
+                //}
+                default:
+                    {
+                        return -1.0;
+                    }
             }
 
-            
+
         }
 
 
@@ -239,8 +244,8 @@ namespace Basics._01_Grundbausteine
 
             if (box is int)
                 return (double)(int)box;
-                // gleich in Double wandeln geht nicht !!
-                //return (double)box;
+            // gleich in Double wandeln geht nicht !!
+            //return (double)box;
             else if (box is short)
                 return (double)(short)box;
             if (box is double)

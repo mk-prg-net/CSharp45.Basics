@@ -137,9 +137,24 @@ namespace Basics.Test._02_Arrays_Collections_und_Schnittstellen
 
             PreislisteGen[0] = new Preis(4, 99);
             PreislisteGen[1] = new Preis(1, 99);
-            PreislisteGen[2] = new Preis(2, 29);
 
-            var p1 = PreislisteGen[1];           
+            // Instanz des generischen Typs ist streng typisiert
+            // Einträge dürfen nur Preise sein.
+            PreislisteGen[2] = new Preis(2, 29);
+            //PreislisteGen[2] = "3,99 Eur"; // Fehler
+
+            var p1 = PreislisteGen[1];
+
+
+            // Die klassische Arraylist frisst alles
+            var untypisierteList = new System.Collections.ArrayList();
+            untypisierteList.Add(new Preis(3, 99));
+            untypisierteList.Add("3, 99");
+
+            // Problem: man muss wissen, welchen Typ die einzelnen Einträge haben,
+            // sonst gibt es InvalidCastExceptions !
+            Assert.IsInstanceOfType(untypisierteList[0], typeof(Preis));
+            Assert.IsInstanceOfType(untypisierteList[1], typeof(string));
 
 
             var A8 = new ArrayGenerisch<Basics._04_Objektorientiert.Autobahn.Auto>(3);
@@ -180,7 +195,16 @@ namespace Basics.Test._02_Arrays_Collections_und_Schnittstellen
 
             FüllePreisliste(Preisliste);
 
+            // Zum Rechnen sind klassische Arrays immer noch die effizienteste Lösung
+            Preis[] meinPreisArray = Preisliste.ToArray();
+
             // Linked List
+            // +---------+    +---------+
+            // | value1  |    | value2  |
+            // +---------+    +---------+
+            // | next ---+--->| next----+----> ...
+            // +---------+    +---------+
+            //
             var AktuellePreise = new LinkedList<string>();
             foreach (var p in Preisliste)
             {
@@ -216,9 +240,20 @@ namespace Basics.Test._02_Arrays_Collections_und_Schnittstellen
 
             // 2 PReise entfernen
             Preisliste.Remove(new Preis(12, 45));
+            // die 12,45 € sind immer noch in der Liste, denn Remove sucht den zu löschenden
+            // Eintrag über die Hauptseicheradresse. Hier wurde in der Parameterliste von 
+            // Remove ein neues, noch nicht in Preisliste enthaltenes Objekt mit neuer Adresse erzeugt
 
-            // den 3. Preis entfernen
+            // Adresse des gesuchten Preises bestimmen
+            var vierterEintrag = Preisliste[3];
+
+            // Die 12,45 werden nun erfolgreich gelöscht
+            Preisliste.Remove(vierterEintrag);
+
+            // Löschen bezüglich des Indizes: den 3. Preis entfernen
             Preisliste.RemoveAt(3);
+
+            
 
             
             AktuellePreise.Clear();

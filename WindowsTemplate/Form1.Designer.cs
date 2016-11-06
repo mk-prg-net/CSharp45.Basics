@@ -1,6 +1,6 @@
 ﻿namespace WindowsTemplate
 {
-    partial class Form1
+    partial class Form1 
     {
         /// <summary>
         /// Erforderliche Designervariable.

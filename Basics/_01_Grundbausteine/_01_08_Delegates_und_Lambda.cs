@@ -36,6 +36,12 @@ namespace Basics._01_Grundbausteine
         /// <returns></returns>
         public delegate double DGBinOp(double a, double b);
 
+        public static double Calculator1(double a, double b, DGBinOp op)
+        {
+            return op.Invoke(a, b);
+        }
+
+
 
         // 
         /// <summary>

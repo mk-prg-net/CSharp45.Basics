@@ -20,30 +20,30 @@ namespace Basics.Test._04_Objektorientiert
 
 
 
-        double AddMassesInList(List<ctx.Himmelskörper> listCBs)
+        double AddMassesInList(List<ctx.IHimmelskörper> listCBs)
         {
             return listCBs.Sum(r => r.Masse_in_kg);
         }
 
 
-        double AddMasses(IEnumerable<ctx.Himmelskörper> itCBs)
+        double AddMasses(IEnumerable<ctx.IHimmelskörper> itCBs)
         {
             return itCBs.Sum(r => r.Masse_in_kg);
         }
 
 
-        [TestMethod]
-        public void TestCovariant()
-        {
-            var stars = new List<ctx.Stern>();
-            stars.AddRange(new ctx.Stern[] {
-                new ctx.Stern()
+        //[TestMethod]
+        //public void TestCovariant()
+        //{
+        //    var stars = new List<ctx.Stern>();
+        //    stars.AddRange(new ctx.Stern[] {
+        //        new ctx.Stern()
 
-        });
-            var galactica = new List<ctx.Galaxie>();
+        //});
+        //    var galactica = new List<ctx.Galaxie>();
 
-            galactica.Add(new ctx.Galaxie())
+        //    galactica.Add(new ctx.Galaxie());
 
-        }
+        //}
     }
 }

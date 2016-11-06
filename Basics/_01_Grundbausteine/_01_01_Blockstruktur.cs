@@ -36,10 +36,25 @@ namespace Basics._01_Grundbausteine
                         // Anonymer Block 2
                         {
                             // In C/C++ zulässig, in C# nicht
-                            // int x = 199;
+                            //int x = 199;
                             int x1 = 199;
                             // Im Innersten_angelangt
                         }
+
+                        // Eine weitere Nebenrechnung
+                        {
+                            // x1 wird hier neu angelegt
+                            int x1 = 299;
+                        }
+                        // in diesem übergeordneten Block existiert x1 nicht
+                        // x1 = 22;
+
+                        // Eine weitere Nebenrechnung
+                        {
+                            // x1 wird hier neu angelegt
+                            int x1 = 399;
+                        }
+
                         // y existiert hier nicht mehr- bereits vom Stack geräumt
                     }
                     // x existiert hier nicht mehr- bereits vom Stack geräumt

@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Basics._04_Objektorientiert.Astro
 {
-    public abstract class Planet : Himmelskörper
+    public interface IPlanet : IHimmelskörper
     {
         /// <summary>
         /// 1:n Beziehung:
         /// Verweis auf den Stern, der umkreist wird von diesem Planeten
         /// </summary>
-        public abstract Stern Zentralstern { get; }
+        Stern Zentralstern { get; }
 
         /// <summary>
-        /// 1:n Beziehung zwischen Planet und seinen Monden:
-        /// Liste der Monde, die diesen Planeten umkreisen
+        /// Masse des Planeten, gemessen in Erdmassen
         /// </summary>
-        public abstract IEnumerable<Mond> Monde { get; }
+        double Masse_in_Erdmassen { get; }
+
     }
 }

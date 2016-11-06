@@ -45,7 +45,7 @@ namespace Basics._04_Objektorientiert
                 if (ZeitlimitUeberschrittenEvent != null)
                 {
                     //Eventhandler wurden registriert-> Event wird gefeuert
-                    ZeitlimitUeberschrittenEvent(ZeitLimitInMs, ZeitInMsEigenschaft);
+                    ZeitlimitUeberschrittenEvent.Invoke(ZeitLimitInMs, ZeitInMsEigenschaft);
                 }
 
 

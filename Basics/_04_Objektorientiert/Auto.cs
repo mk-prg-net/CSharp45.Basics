@@ -208,10 +208,10 @@ namespace Basics._04_Objektorientiert.Autobahn
 
 
         // Implementierung der Dispose- Methode
-        //public void Dispose()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public void Dispose()
+        {
+            Debug.WriteLine("Das ursprüngliche Auto- Dispose");
+        }
 
         // public void Dispose()     // implizit implementiert
         void IDisposable.Dispose()  // explizit implementiert
@@ -239,7 +239,6 @@ namespace Basics._04_Objektorientiert.Autobahn
 
         //
         public int SchadensfreiheitklasseSimpel { get; set; }
-
 
     }
 }

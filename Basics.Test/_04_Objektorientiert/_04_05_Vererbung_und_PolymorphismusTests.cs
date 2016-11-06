@@ -2,47 +2,25 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 
+using System.Linq;
+
 using Basics._04_Objektorientiert;
+using Basics._04_Objektorientiert.Astro.inMem;
 
 namespace Basics._04_Objektorientiert
 {
     [TestClass]
     public class _04_PolymorphismusTests
     {
-        [ClassInitialize]
-        public void ClassInit(TestContext ctx)
-        {
-            mko.Newton.Init.Do();
-        }
-
-        [TestMethod]
-        public void HimmeslkoerperTest()
-        {
-            Stern Sonne = new Stern(1.0);
-            Stern Beteigeuze = new Stern(100);
-
-            Galaxie Milchstrasse = new Galaxie(new Stern[] { Sonne, Beteigeuze });
-
-            // Upcast (Cast in den Typ der Basisklasse) ist implizit möglich
-            Himmelskörper h = Sonne;
-
-            // Downcast muss immer mit expliziter Typkonvertierung erfolgen
-            Stern einStern = (Stern)h;
-
-            // Demo Polymorphismus
-            Himmelskörper[] Katalog = { Sonne, Beteigeuze, Milchstrasse };
-
-
-            foreach (var himmelkoerper in Katalog)
-            {
-                Debug.WriteLine(himmelkoerper.BerechneMasseInKg());
-            }
-
-        }
+        //[ClassInitialize]
+        //public void ClassInit()
+        //{
+        //    mko.Newton.Init.Do();
+        //}
 
 
         [TestMethod]
-        public void TestMethod1()
+        public void Autobahntest()
         {
             Autobahn.Benzinauto FredVollgas = new Autobahn.Benzinauto("Ferrari", "F4");
             Autobahn.Dieselauto RudiNormalo = new Autobahn.Dieselauto("VW", "Passat TDI");

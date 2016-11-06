@@ -18,7 +18,8 @@ namespace Basics._02_Arrays_Collections_und_Schnittstellen
         int _ID2 = 99;
         public int ID2
         {
-            get { throw new NotImplementedException(); }
+            get { return _ID2; }
         }
+
     }
 }

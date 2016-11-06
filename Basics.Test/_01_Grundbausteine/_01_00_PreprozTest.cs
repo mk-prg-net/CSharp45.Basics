@@ -1,5 +1,5 @@
 ﻿// Eine Preprozessorkonstante deklarieren
-#define MeinePreProzKonstante
+//#define MeinePreProzKonstante
 // #define DEBUG
 
 using System;
@@ -15,8 +15,8 @@ namespace Basics.Test._01_Grundbausteine
         public void _01_00_PreProzTest1()
         {
             // Zusätzliche Medien zur Aufzeichnung der Traceindfos definiert
-            //var txtList = new TextWriterTraceListener(@"Trace.txt");
-            //Debug.Listeners.Add(txtList);
+            var txtList = new TextWriterTraceListener(@"Trace.txt");
+            Debug.Listeners.Add(txtList);
             //Trace.Listeners.Add(txtList);
 
             //Debug.AutoFlush = true;

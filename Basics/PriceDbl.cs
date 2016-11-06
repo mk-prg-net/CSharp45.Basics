@@ -90,18 +90,42 @@ namespace Basics
         //    throw new NotImplementedException();
         //}
 
-        int IComparable.CompareTo(object obj)
+        //int IComparable.CompareTo(object obj)
+        //{
+        //    // 1. Konvertieren von obj in ein PriceDbl
+        //    PriceDbl derAnderePreis = (PriceDbl)obj;
+
+        //    // 2. Vergleichen auf Basis von USD
+        //    if (this.ToUSD() < derAnderePreis.ToUSD())
+        //        return -1;
+        //    else if (this.ToUSD() > derAnderePreis.ToUSD())
+        //        return 1;
+        //    else
+        //        return 0;
+        //}
+
+        public int CompareTo(object obj)
         {
-            // 1. Konvertieren von obj in ein PriceDbl
+            // Downcast von object in PreisDBL
             PriceDbl derAnderePreis = (PriceDbl)obj;
 
-            // 2. Vergleichen auf Basis von USD
+            int res = 0;
+
             if (this.ToUSD() < derAnderePreis.ToUSD())
-                return -1;
+            {
+                res = -1;
+            }
             else if (this.ToUSD() > derAnderePreis.ToUSD())
-                return 1;
+            {
+                res = 1;
+            }
             else
-                return 0;
+            {
+                res = 0;
+            }
+
+            return res;
+
         }
     }
 }

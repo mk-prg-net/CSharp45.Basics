@@ -113,7 +113,9 @@ SPRUNGMARKE:
             double dPreis2 = 385.6;
 
             double dGesamt = dPReis1 + dPreis2;
-            Assert.AreEqual("485,10", dGesamt.ToString("N2"));            
+            Assert.AreEqual("485,10", dGesamt.ToString("N2"));
+
+            double d01 = 0.3;
 
             // Jedoch können in Gleitkommarechnungen Rundungsfehler erbarmungslos zuschlagen
             //float EntfernungRaketeVonErde = (float)19999998.0; // f;
@@ -121,6 +123,7 @@ SPRUNGMARKE:
 
             for (int i = 1; i <= 10; i++)
             {
+                //EntfernungRaketeVonErde += (float)1.0;
                 EntfernungRaketeVonErde += 1.0f;
             }
 

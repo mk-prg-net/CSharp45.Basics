@@ -9,14 +9,33 @@ namespace Basics.Test._04_Objektorientiert
     [TestClass]
     public class _04_02_Konstruktion_Destruktion
     {
+        class C
+        {
+            public static int anz_instanzen;
+            public static double pi;
+
+            static C()
+            {
+                anz_instanzen = 1;
+                pi = Basics._01_Grundbausteine._01_03_Ausdruecke.F_Pi_Kettenbruch();
+            }
+        }
+
+
         [TestMethod]
         public void TestMethod1()
         {
+            // Statische Konstruktoren
+            var mein_pi = C.pi;
+            var dein_pi = C.pi;
+            var meine_instanzen = C.anz_instanzen;
+
+            // Objektkonstruktion
             Auto HugosSchrottkiste = new Auto();
 
             HugosSchrottkiste.EntfernungVonStuttgartInKm = 200;
 
-            //HugosSchrottkiste.Dispose();
+            HugosSchrottkiste.Dispose();
 
             // Um die explizit implementierte Dispose- Methode aus IDisposable aufzurufen, muß zuvor ein Schnittstellenzeiger gezogen werden
             IDisposable ptrIDsp = HugosSchrottkiste;
@@ -24,10 +43,24 @@ namespace Basics.Test._04_Objektorientiert
 
             ((IDisposable)HugosSchrottkiste).Dispose();
 
+            {
+                IDisposable dptr = HugosSchrottkiste;
+                dptr.Dispose();
+            }
+
+            var Goldpfeil = new Auto();
+
+            //...
+            {
+                IDisposable dptr = Goldpfeil;
+                dptr.Dispose();
+            }
+
             // Simmulation von 'Scope' in C++
             using (var Silberpfeil = new Auto("Mercedes", "Rennauto"))
             {
                 Debug.WriteLine(Silberpfeil.Marke);
+
             } // Hier wird automatisch Dispose aufgerufen
 
             // Im unsing- Block können nur Objekte instanziiert werden, deren Klasse
@@ -89,7 +122,7 @@ namespace Basics.Test._04_Objektorientiert
             for (int k = 0; k < 100; k++)
             {
                 Auto FredVollgas = new Auto("VW", "Nr " + k, 0, 80);
-                using (Auto FredVollgas2 = new Auto("VW", "Nr " + k, 0, 80))
+                using (Auto FredVollgas2 = new Auto("VW-using", "Nr " + k, 0, 80))
                 {
                     do
                     {

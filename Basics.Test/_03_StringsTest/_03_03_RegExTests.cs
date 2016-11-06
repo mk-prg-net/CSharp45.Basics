@@ -23,6 +23,29 @@ namespace Basics.Test._03_StringsTest
                 // ((3 (5 2)+)* 2)*
 
                 string term = "((3 (5 2)+)* 2)*";
+
+                // Demo reguläre Ausdrücke
+                // Zählen aller Ziffer
+                string term2 = "((3 (53 270)+)* 2,2)*";
+
+                // alle Zahlen herausfiltern
+                // \d: Klasse der Ziffernsymbole
+                // + : Quantor: mind. 1x , sonst beliebig viele
+                // * : Quantor: 0 bis beliebig viele
+                // ? : Quantor: 0 bis mx. 1x
+                MatchCollection matchColl = Regex.Matches(term2, @"\d+\,?\d*");
+
+                foreach (var match in matchColl)
+                {
+                    Debug.WriteLine(match.ToString());
+                }
+
+
+
+
+
+
+
                 Debug.WriteLine(term);
 
                 // Separation der Symbole

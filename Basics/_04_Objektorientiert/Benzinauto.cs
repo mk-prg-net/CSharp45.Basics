@@ -18,6 +18,17 @@ namespace Basics._04_Objektorientiert.Autobahn
         /// <param name="Modell"></param>
         public Benzinauto(string Marke, string Modell) : base(Marke, Modell) { }
 
+        public bool E10_tauglich
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         /// <summary>
         /// Allgemeine Methode zum betanken eines Fahrzeuges
         /// </summary>

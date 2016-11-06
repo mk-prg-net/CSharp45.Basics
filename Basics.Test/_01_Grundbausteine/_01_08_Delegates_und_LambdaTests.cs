@@ -10,6 +10,11 @@ namespace Basics.Test._01_Grundbausteine
     {
         Func<double, double, double> myFunc;
 
+        double ExoticOp(double a, double b)
+        {
+            return a * (a + b) / b;
+        }
+
         [TestMethod]
         public void _01_08_01_DelegatesTest()
         {
@@ -68,6 +73,11 @@ namespace Basics.Test._01_Grundbausteine
             // Berechnung des Produktes 1 * 2 * 3 * ... = N!
             res = Ctx.Akku(1.0, Ctx.Mul, 1, 2, 3, 4, 5, 6);
             Assert.AreEqual(720, res);
+
+            // Berechnung des Produktes 1 * 2 * 3 * ... = N!
+            res = Ctx.Akku(1.0, ExoticOp, 1, 2, 3, 4, 5, 6);
+            
+
         }
 
         [TestMethod]

@@ -17,6 +17,8 @@ namespace Basics.Test._04_Objektorientiert
             Assert.AreEqual(MDCLXVI, 1666);
 
             // Aufruf des selbstdefinierten Additionsoperators für Romzahlen
+            // Compiler wandelt aufruf um in:
+            // var RomSumme = Romzahl.operator+(a, b)
             var RomSumme = a + b;
             long LongSumme = (long)RomSumme;
             Assert.AreEqual(LongSumme, 1679);

@@ -67,7 +67,13 @@ namespace Basics.Test._01_Grundbausteine
             // Typinferenz: Deklaration ohne Typspezifikation-> Typ wird aus dem zugewiesenen Wert bestimmt
             var ii = 0;
 
+            // int können keine null- Werte verwalten
+            //ii = null;
+
+            // Nullables schon...
             Nullable<int> iNull = null;           
+
+            // int? ist Kurzform für Nullable<int>
             int? iNull2 = null;
             var iNull3 = new Nullable<int>();
 

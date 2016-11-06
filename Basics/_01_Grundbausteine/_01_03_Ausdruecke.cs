@@ -10,10 +10,12 @@ namespace Basics._01_Grundbausteine
     {        
         /// <summary>
         /// Pi aus einem Kettenbruch errechnen: https://de.wikipedia.org/wiki/Kreiszahl#Kettenbruchentwicklung 
+        /// 
         /// </summary>
         /// <returns></returns>
         public static double F_Pi_Kettenbruch() {
 
+            // PI -> 3.142....
             return 3.0 + (1.0 / (7.0 + 1.0 / (15.0 + 1.0 / (1.0 + 1.0 / 292.0 + 1.0 / (1.0 + 1.0 / (1.0 + 1.0 / (1.0 + 1.0 / (2.0 + 1.0 / (1.0 + 1.0 / (3.0 + 1.0 / (1.0 + 1.0 / (14.0 + 1.0 / (2.0 + 1.0 / (1.0 + 1.0 / (1.0 + 1.0 / 2.0)))))))))))))));
         }
 
@@ -28,6 +30,9 @@ namespace Basics._01_Grundbausteine
         /// <summary>
         /// Grössten gemeinsamen Teiler zweier Ganzer Zahlen mittels Euklidischen Algorithmus berechnen
         /// Siehe https://de.wikipedia.org/wiki/Euklidischer_Algorithmus
+        /// 
+        /// GGT: (a,b) -> ggt mit a und b el N und ggt | a und ggt | b
+        /// 
         /// </summary>
         /// <param name="a"></param>
         /// <param name="b"></param>
@@ -42,10 +47,16 @@ namespace Basics._01_Grundbausteine
         public static int GGT2(int a, int b)
         {
             // Anstatt ternärer Operator der If- Block
-            if (b == 0) return a; else return GGT2(b, a % b);
+            if (b == 0)
+            {
+                return a;
+            }
+            else
+            {
+                return GGT2(b, a % b);
+            }
 
         }
-
 
         public static bool PrimTest(int z)
         {
