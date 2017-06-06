@@ -11,21 +11,87 @@ namespace Basics
     // PriceDbl verpflichtet sich, die IComparable- Schnittstelle/Vertrag zu implementieren/erfüllen
     public struct PriceDbl : IComparable
     {
+
+        public static PriceDbl Instance
+        {
+            get
+            {
+                //if (_Instance == null)
+                //{
+                //    _Instance = new PriceDbl(1, CurrencySymbols.USD);
+                //}
+
+                if (_Instance.Value == 0)
+                {
+
+                    _Instance = new PriceDbl(1, CurrencySymbols.USD);
+
+                }
+
+                return _Instance;
+            }
+        }
+        static PriceDbl _Instance;
+
+
         // nummerischer Anteil eines Preises
-        public double Value;
+        public double Value; //{ get; set; }
+        //{
+        //    get {
+        //        return _Value;
+        //    } 
+        //    set{
+        //        _Value = value;
+        //    }
+        //}
+        // double _Value;
 
         // Währungssymbol
         public CurrencySymbols CurSym;
+        // {
+        //    get
+        //    {
+        //        return _CurSym;
+        //    }
+        //    set
+        //    {
+        //        _CurSym = value;
+        //    }
+        //}
+        //CurrencySymbols _CurSym;
+        //readonly double exRateSFr;
+        //readonly double exRateEur;
 
         // Konstruktor (Initialisierungroutine), die das Anlegen
         // eines Preises erkleichtert
-        public PriceDbl(double Value, CurrencySymbols CurSym)
+        public PriceDbl(double Value1, CurrencySymbols CurSym) //, double exRateEur = 1.275, double exRateSFr = 1.055)
         {
             // Zur Unterscheidung der Member von den gleichnamigen Parametern
             // wird den Membern das Schlüsselwort this. vorangestellt
-            this.Value = Value;
+            //_Value = 0;
+            //_CurSym = CurrencySymbols.USD;
+            //_Value = 0;
+            this.Value = Value1;
             this.CurSym = CurSym;
+            //this.exRateEur = exRateEur;
+            //this.exRateSFr = exRateSFr;
         }
+
+
+        //public double ExchangeRateToUSD_InstanceMethod(CurrencySymbols From)
+        //{
+        //    // Kurse vom 13.10.2014
+        //    switch (From)
+        //    {
+        //        case CurrencySymbols.EUR:
+        //            return exRateEur;
+        //        case CurrencySymbols.SFr:
+        //            return exRateSFr;
+        //        case CurrencySymbols.USD:
+        //            return 1.0;
+        //        default: throw new ArgumentOutOfRangeException(From.ToString());
+        //    }
+        //}
 
         /// <summary>
         /// Liefert den Wechselkurs für den Umtausch einer Währung in USD

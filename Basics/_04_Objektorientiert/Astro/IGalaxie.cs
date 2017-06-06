@@ -10,4 +10,15 @@ namespace Basics._04_Objektorientiert.Astro
     {
         IEnumerable<Stern> Sterne { get; }
     }
+
+    public interface IGalaxieMitStrategie : IHimmelskörper
+    {
+        /// <summary>
+        /// Schnittstelle so erweitert, dass die Masseberechnung flexibel 
+        /// ist. Die Wahrung des Open closed Princip wird hierdurch besser garantiert.
+        /// </summary>
+        IStrategieBerechneMasseGalaxie Masseberechnungsalgo { set; }
+
+        IEnumerable<Stern> Sterne { get; }
+    }
 }

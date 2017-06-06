@@ -18,7 +18,12 @@ namespace Basics._04_Objektorientiert
         {
             mko.Newton.Init.Do();
 
+            //Astro.IGalaxie g = new Galaxie("Test");
+
             Universum.Instance.CreateGalaxie("Milchstrasse");
+
+            // eine Galaxie kann nicht direkt erzeugt werden
+            //var Andromeda = new Basics._04_Objektorientiert.Astro.inMem.Galaxie("Andromeda");
 
             // Zugriff auf die Milchstrasse
             var Milchstrasse = Universum.Instance.GetGalaxie("Milchstrasse");
@@ -62,6 +67,7 @@ namespace Basics._04_Objektorientiert
 
             // Strategie: die Palnetenmassen bei der Berechnung vernachlässigen
             Universum.Instance.CreateGalaxieWithStrategie("Milchstrasse", Astro.BerechneGalaxiemasseAusDenSternen.Instanz);
+            Universum.Instance.CreateGalaxieWithStrategie("Milchstrasse", Astro.BerechneGalaxiemasseAusDenSternenUndPlaneten.Instanz);
 
             // Zugriff auf die Milchstrasse
             var Milchstrasse = Universum.Instance.GetGalaxie("Milchstrasse");

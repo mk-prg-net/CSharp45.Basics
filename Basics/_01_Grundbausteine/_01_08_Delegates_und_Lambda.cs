@@ -70,7 +70,7 @@ namespace Basics._01_Grundbausteine
         /// <returns></returns>
         public static double Akku(double InitVal, Func<double, double, double> binOp, params double[] Operands) {
             double res = InitVal;
-            foreach(double operand in Operands) {
+            foreach(double operand in Operands) {                
                 res = binOp(res, operand);
             }
             return res;

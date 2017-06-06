@@ -20,7 +20,7 @@ namespace Basics._01_Grundbausteine
         }
 
         public static Point GetPoint(int PointNumber, Point p)
-        {            
+        {
             // Hier erfolgt fiktiv ein Datenbasnkzugriff, der zur Nummer den zugehörigen Punkt holt
             // ...
             p.X = PointNumber;
@@ -31,7 +31,7 @@ namespace Basics._01_Grundbausteine
         // Demo von Defaultparametern
         // Die folgende Funktion entspricht dem Desingpattern einer Klassenfabrik
         public static Point CreatePoint(double x = 99, double y = 99)
-        {            
+        {
             //Point p = new Point();
             //p.X = 9;
             //p.Y = 11;
@@ -46,7 +46,7 @@ namespace Basics._01_Grundbausteine
         /// <returns></returns>
         public static double Length(Point a)
         {
-            return Math.Sqrt(a.X*a.X + a.Y*a.Y);
+            return Math.Sqrt(a.X * a.X + a.Y * a.Y);
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace Basics._01_Grundbausteine
         /// <returns></returns>
         public static bool Equal(Point a, Point b, double delta)
         {
-            Point diff = new Point() { X = a.X - b.X, Y =  a.Y - b.Y };
+            Point diff = new Point() { X = a.X - b.X, Y = a.Y - b.Y };
 
             return delta > Length(diff);
 
@@ -94,7 +94,7 @@ namespace Basics._01_Grundbausteine
         /// <param name="x"></param>
         /// <param name="y"></param>
         public static void PolarToCartesian(double r, double phi_in_rad, out double x, out double y)
-        {
+        {            
             x = r * Math.Sin(phi_in_rad);
             y = r * Math.Cos(phi_in_rad);
 
@@ -123,6 +123,33 @@ namespace Basics._01_Grundbausteine
             p.Y = r * Math.Cos(phi_in_rad);
         }
 
+        /// <summary>
+        /// Demo: Wertetypen werden immer als call by value übergeben
+        /// </summary>
+        /// <param name="r"></param>
+        /// <param name="phi_in_rad"></param>
+        /// <param name="p"></param>
+        public static void PolarToCartesianWithWithSPoint(double r, double phi_in_rad, ref SPoint p)
+        {
+            p.X = r * Math.Sin(phi_in_rad);
+            p.Y = r * Math.Cos(phi_in_rad);
+        }
+
+        public static void PolarToCartesianWithWithOutSPoint(double r, double phi_in_rad, out SPoint p)
+        {
+            p.X = r * Math.Sin(phi_in_rad);
+            p.Y = r * Math.Cos(phi_in_rad);
+        }
+
+
+
+        public static void PolarToCartesianWithWithSPointFalsch(double r, double phi_in_rad, SPoint p)
+        {
+            p.X = r * Math.Sin(phi_in_rad);
+            p.Y = r * Math.Cos(phi_in_rad);
+        }
+
+
 
         /// <summary>
         /// Demo Paramarray
@@ -133,6 +160,12 @@ namespace Basics._01_Grundbausteine
         {
             double _sum = 0;
 
+            for (int i = 0; i < summanden.Length; i++)
+            {
+                _sum += summanden[i];
+            }
+
+            _sum = 0;
             foreach (double s in summanden)
             {
                 _sum += s;
@@ -147,7 +180,7 @@ namespace Basics._01_Grundbausteine
         /// <param name="factor"></param>
         /// <param name="summanden"></param>
         /// <returns></returns>
-        public static double MulSum(double factor,  params double[] summanden)
+        public static double MulSum(double factor, params double[] summanden)
         {
             double _sum = 0;
 
@@ -156,7 +189,7 @@ namespace Basics._01_Grundbausteine
                 _sum += s;
             }
 
-            return factor *_sum;
+            return factor * _sum;
         }
 
 
@@ -169,9 +202,9 @@ namespace Basics._01_Grundbausteine
         /// <param name="vStartInKmh"></param>
         /// <returns></returns>
         public static _04_Objektorientiert.Autobahn.Auto CreateAuto(
-            string Markenname, 
-            string Modell, 
-            double EntfernungVomStart = 0, 
+            string Markenname,
+            string Modell,
+            double EntfernungVomStart = 0,
             double vStartInKmh = 0)
         {
             return new _04_Objektorientiert.Autobahn.Auto(Markenname, Modell, EntfernungVomStart, vStartInKmh);

@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Basics._04_Objektorientiert.Astro.BerechneGalaxiemasseAusDenSternen" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\BerechneGalaxiemasseAusDenSternen.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.BerechneGalaxiemasseAusDenSternenUndPlaneten" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\BerechneGalaxiemasseAusDenSternenUndPlaneten.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.Galaxie" Collapsed="true">
+    <Position X="1.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAYAAAAAAAACAgIAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\Galaxie.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.GalaxieWithStrategie" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\GalaxieWithStrategie.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.Spektralklasse" Collapsed="true">
+    <Position X="13.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOJ+EIQA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\Spektralklasse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.Stern" Collapsed="true">
+    <Position X="5.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAREAAAAAAACAgIACAAAAQA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\Stern.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.inDB.Galaxie" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\inDB\Galaxie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.inMem.Galaxie" Collapsed="true">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAYAAAAAAAACAAIAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\inMem\Galaxie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.inMem.GalaxieFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\inMem\GalaxieFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.inMem.GalaxieWithStrategie" Collapsed="true">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAYAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\inMem\GalaxieWithStrategie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.inMem.GalaxieWithStrategieFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\inMem\GalaxieWithStrategieFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.inMem.Planet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAggAAIEQAAAAAAAAgAgAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\inMem\Planet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.inMem.PlanetFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\inMem\PlanetFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.inMem.Stern" Collapsed="true">
+    <Position X="5.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAIAREACAAAAAAAAAACBAAAQA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\inMem\Stern.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.inMem.SternFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\inMem\SternFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.inMem.Universum" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAQgAAAAAAIAAIQAEQAIAACQAQAAIQAAAAAAQAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\inMem\Universum.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Basics._04_Objektorientiert.Astro.inMem.UniversumWithDI" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAgAQgAAAAAAIAAIYAAQAIAACQAQAAIAAAAAAAQBAQ=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\inMem\UniversumWithDI.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Basics._04_Objektorientiert.Astro.IGalaxie">
+    <Position X="3.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\IGalaxie.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Basics._04_Objektorientiert.Astro.IGalaxieMitStrategie">
+    <Position X="6.25" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\IGalaxie.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Basics._04_Objektorientiert.Astro.IGalaxieFactory" Collapsed="true">
+    <Position X="9.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\IGalaxieFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Basics._04_Objektorientiert.Astro.IGalaxieWithStrategieFactory" Collapsed="true">
+    <Position X="11.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\IGalaxieWithStrategieFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Basics._04_Objektorientiert.Astro.IHimmelskörper">
+    <Position X="3.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\IHimmelskörper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Basics._04_Objektorientiert.Astro.IPlanet">
+    <Position X="0.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\IPlanet.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Basics._04_Objektorientiert.Astro.IPlanetFactory" Collapsed="true">
+    <Position X="13.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\IPlanetFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Basics._04_Objektorientiert.Astro.ISpektralklasse" Collapsed="true">
+    <Position X="15" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgIAgAAAAAABBAAAEAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\ISpektralklasse.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Basics._04_Objektorientiert.Astro.ISternClassFactory" Collapsed="true">
+    <Position X="9.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\ISternClassFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Basics._04_Objektorientiert.Astro.IStrategieBerechneMasseGalaxie">
+    <Position X="6.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\IStrategieBerechneMasseGalaxie.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Basics._04_Objektorientiert.Astro.IUniversum" Collapsed="true">
+    <Position X="13.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAQgAAAAAAIAAIQAAQAIAAAQAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\IUniversum.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Basics._04_Objektorientiert.Astro.SpektralklasseID" Collapsed="true">
+    <Position X="11.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOJ+EIQA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\ISpektralklasse.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Basics._04_Objektorientiert.Astro.Spektralklasse_Farbe" Collapsed="true">
+    <Position X="9.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAAgAAAAAAAAAAAAAQAAACAAACQAAAAAAAAAMAAAA=</HashCode>
+      <FileName>_04_Objektorientiert\Astro\ISpektralklasse.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

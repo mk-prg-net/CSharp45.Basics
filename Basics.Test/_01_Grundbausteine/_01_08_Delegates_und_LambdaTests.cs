@@ -89,7 +89,7 @@ namespace Basics.Test._01_Grundbausteine
 
             res = Ctx.Calculator(2, 7, Ctx.Add);
 
-            // Ausführlicher Lambdaausdruck (anonyme Funktion)
+            // Ausführlicher Lambdaausdruck (anonyme Funktion, Lambdafunktion)
             res = Ctx.Calculator(2, 7, (double a, double b) => { var summe = a + b; return 5 * summe; });
 
             // Durch Typinferenz kann auf die Typen der Parameter verzichtet werden
@@ -101,7 +101,9 @@ namespace Basics.Test._01_Grundbausteine
             // Wenn der Rumpf nur noch aus einem Ausdruck besteht, dann können die {...} Blockklammern
             // weggelassen werden. Auch return kann entfallen- es erfolgt implizit.
             res = Ctx.Calculator(2, 7, (a, b) => 5 * (a + b));
+
             Assert.AreEqual(45, res);
+
 
             res = Ctx.Akku(0, (a, b) => a + b, 2, 3, 4, 5, 6, 7);
 
@@ -111,9 +113,11 @@ namespace Basics.Test._01_Grundbausteine
             res = Ctx.Akku(1, (a, b) => 5*(a + b), 2, 3, 4, 5, 6, 7);
 
 
+            // Lambda- Ausdruck definieren, der entscheidet, ob eine Zahl durch 3 teilbar ist
+            Func<int, bool> kriterium = prüfling => prüfling % 3 == 0;
+
+            Assert.IsTrue(kriterium(9));
+            Assert.IsFalse(kriterium(7));
         }
-
-
-
     }
 }

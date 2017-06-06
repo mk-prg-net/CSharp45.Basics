@@ -126,6 +126,13 @@ namespace Basics.Test._02_Arrays_Collections_und_Schnittstellen
                 Debug.WriteLine(elem);
             }
 
+            var enumerator = meinArray.GetEnumerator();
+
+            if (enumerator.MoveNext())
+            {
+                Debug.WriteLine("erster Wert aus ArrayInt: " + enumerator.Current);
+            }
+
             int sum = 0;
             for (int i = 0; i < meinArray.Length; i++)
                 // Compiler wandelt folgende Zeile um in
@@ -156,6 +163,17 @@ namespace Basics.Test._02_Arrays_Collections_und_Schnittstellen
             Assert.IsInstanceOfType(untypisierteList[0], typeof(Preis));
             Assert.IsInstanceOfType(untypisierteList[1], typeof(string));
 
+            Preis Preis1 = (Preis)untypisierteList[0];
+
+            try
+            {
+                Preis Preis2 = (Preis)untypisierteList[1];
+
+            } catch(Exception ex)
+            {
+
+            }
+            
 
             var A8 = new ArrayGenerisch<Basics._04_Objektorientiert.Autobahn.Auto>(3);
 

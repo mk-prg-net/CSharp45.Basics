@@ -47,7 +47,7 @@ namespace Basics.Test._01_Grundbausteine
             double phi = Math.PI / 4.0;
 
             // Unterprogramm mit out- Parameter
-            double abstand, hoehe;
+            double abstand = 99, hoehe;
             Ctx.PolarToCartesian(r, phi, out abstand, out hoehe);
 
             // Unterprogramm mit ref- Parameter: lokale Variablen im Hauptprogramm müssen vor
@@ -58,10 +58,24 @@ namespace Basics.Test._01_Grundbausteine
             Ctx.PolarToCartesianWithRef(r, phi, ref abstand2, ref hoehe2);
 
             Point pFlugzeug = new Point();
-
             Ctx.PolarToCartesianWithImplicitRef(r, phi, pFlugzeug);
 
-            
+            SPoint sFlugzeug= new SPoint();
+            Ctx.PolarToCartesianWithWithSPoint(r, phi, ref sFlugzeug);
+
+            SPoint sFlugzeug2 = new SPoint();
+            Ctx.PolarToCartesianWithWithSPointFalsch(r, phi, sFlugzeug2);
+
+            SPoint sFlugzeug3;
+            Ctx.PolarToCartesianWithWithOutSPoint(r, phi, out sFlugzeug3);
+
+
+
+
+
+
+
+
 
 
             // Benannte Parameter           

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basics", "Basics\Basics.csproj", "{A8595DDF-B9FB-46F1-B64A-076BEC045236}"
 EndProject
@@ -32,6 +32,8 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Meine Konfig|Any CPU = Meine Konfig|Any CPU
+		pcc-2017-04|Any CPU = pcc-2017-04|Any CPU
 		Release_mit_unsicherem_Code|Any CPU = Release_mit_unsicherem_Code|Any CPU
 		Release|Any CPU = Release|Any CPU
 		Release-ohne-Trace|Any CPU = Release-ohne-Trace|Any CPU
@@ -39,6 +41,10 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A8595DDF-B9FB-46F1-B64A-076BEC045236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A8595DDF-B9FB-46F1-B64A-076BEC045236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8595DDF-B9FB-46F1-B64A-076BEC045236}.Meine Konfig|Any CPU.ActiveCfg = Meine Konfig|Any CPU
+		{A8595DDF-B9FB-46F1-B64A-076BEC045236}.Meine Konfig|Any CPU.Build.0 = Meine Konfig|Any CPU
+		{A8595DDF-B9FB-46F1-B64A-076BEC045236}.pcc-2017-04|Any CPU.ActiveCfg = pcc-2017-04|Any CPU
+		{A8595DDF-B9FB-46F1-B64A-076BEC045236}.pcc-2017-04|Any CPU.Build.0 = pcc-2017-04|Any CPU
 		{A8595DDF-B9FB-46F1-B64A-076BEC045236}.Release_mit_unsicherem_Code|Any CPU.ActiveCfg = Release_mit_unsicherem_Code|Any CPU
 		{A8595DDF-B9FB-46F1-B64A-076BEC045236}.Release_mit_unsicherem_Code|Any CPU.Build.0 = Release_mit_unsicherem_Code|Any CPU
 		{A8595DDF-B9FB-46F1-B64A-076BEC045236}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,6 +53,10 @@ Global
 		{A8595DDF-B9FB-46F1-B64A-076BEC045236}.Release-ohne-Trace|Any CPU.Build.0 = Release-ohne-Trace|Any CPU
 		{AD694D07-DAE1-4648-8136-F416A479B26C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AD694D07-DAE1-4648-8136-F416A479B26C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD694D07-DAE1-4648-8136-F416A479B26C}.Meine Konfig|Any CPU.ActiveCfg = Meine Konfig|Any CPU
+		{AD694D07-DAE1-4648-8136-F416A479B26C}.Meine Konfig|Any CPU.Build.0 = Meine Konfig|Any CPU
+		{AD694D07-DAE1-4648-8136-F416A479B26C}.pcc-2017-04|Any CPU.ActiveCfg = pcc-2017-04|Any CPU
+		{AD694D07-DAE1-4648-8136-F416A479B26C}.pcc-2017-04|Any CPU.Build.0 = pcc-2017-04|Any CPU
 		{AD694D07-DAE1-4648-8136-F416A479B26C}.Release_mit_unsicherem_Code|Any CPU.ActiveCfg = Release_mit_unsicherem_Code|Any CPU
 		{AD694D07-DAE1-4648-8136-F416A479B26C}.Release_mit_unsicherem_Code|Any CPU.Build.0 = Release_mit_unsicherem_Code|Any CPU
 		{AD694D07-DAE1-4648-8136-F416A479B26C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -55,6 +65,10 @@ Global
 		{AD694D07-DAE1-4648-8136-F416A479B26C}.Release-ohne-Trace|Any CPU.Build.0 = Release-ohne-Trace|Any CPU
 		{04321266-6772-4597-87DA-8A945E15F986}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{04321266-6772-4597-87DA-8A945E15F986}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04321266-6772-4597-87DA-8A945E15F986}.Meine Konfig|Any CPU.ActiveCfg = Meine Konfig|Any CPU
+		{04321266-6772-4597-87DA-8A945E15F986}.Meine Konfig|Any CPU.Build.0 = Meine Konfig|Any CPU
+		{04321266-6772-4597-87DA-8A945E15F986}.pcc-2017-04|Any CPU.ActiveCfg = pcc-2017-04|Any CPU
+		{04321266-6772-4597-87DA-8A945E15F986}.pcc-2017-04|Any CPU.Build.0 = pcc-2017-04|Any CPU
 		{04321266-6772-4597-87DA-8A945E15F986}.Release_mit_unsicherem_Code|Any CPU.ActiveCfg = Release_mit_unsicherem_Code|Any CPU
 		{04321266-6772-4597-87DA-8A945E15F986}.Release_mit_unsicherem_Code|Any CPU.Build.0 = Release_mit_unsicherem_Code|Any CPU
 		{04321266-6772-4597-87DA-8A945E15F986}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +77,10 @@ Global
 		{04321266-6772-4597-87DA-8A945E15F986}.Release-ohne-Trace|Any CPU.Build.0 = Release-ohne-Trace|Any CPU
 		{A05DB070-3AAC-4312-A15D-584CCD94BAD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A05DB070-3AAC-4312-A15D-584CCD94BAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A05DB070-3AAC-4312-A15D-584CCD94BAD8}.Meine Konfig|Any CPU.ActiveCfg = Meine Konfig|Any CPU
+		{A05DB070-3AAC-4312-A15D-584CCD94BAD8}.Meine Konfig|Any CPU.Build.0 = Meine Konfig|Any CPU
+		{A05DB070-3AAC-4312-A15D-584CCD94BAD8}.pcc-2017-04|Any CPU.ActiveCfg = pcc-2017-04|Any CPU
+		{A05DB070-3AAC-4312-A15D-584CCD94BAD8}.pcc-2017-04|Any CPU.Build.0 = pcc-2017-04|Any CPU
 		{A05DB070-3AAC-4312-A15D-584CCD94BAD8}.Release_mit_unsicherem_Code|Any CPU.ActiveCfg = Release_mit_unsicherem_Code|Any CPU
 		{A05DB070-3AAC-4312-A15D-584CCD94BAD8}.Release_mit_unsicherem_Code|Any CPU.Build.0 = Release_mit_unsicherem_Code|Any CPU
 		{A05DB070-3AAC-4312-A15D-584CCD94BAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -71,6 +89,10 @@ Global
 		{A05DB070-3AAC-4312-A15D-584CCD94BAD8}.Release-ohne-Trace|Any CPU.Build.0 = Release-ohne-Trace|Any CPU
 		{B8E7D9D9-CE00-4B33-8FC0-4AC062D30436}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B8E7D9D9-CE00-4B33-8FC0-4AC062D30436}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8E7D9D9-CE00-4B33-8FC0-4AC062D30436}.Meine Konfig|Any CPU.ActiveCfg = Meine Konfig|Any CPU
+		{B8E7D9D9-CE00-4B33-8FC0-4AC062D30436}.Meine Konfig|Any CPU.Build.0 = Meine Konfig|Any CPU
+		{B8E7D9D9-CE00-4B33-8FC0-4AC062D30436}.pcc-2017-04|Any CPU.ActiveCfg = pcc-2017-04|Any CPU
+		{B8E7D9D9-CE00-4B33-8FC0-4AC062D30436}.pcc-2017-04|Any CPU.Build.0 = pcc-2017-04|Any CPU
 		{B8E7D9D9-CE00-4B33-8FC0-4AC062D30436}.Release_mit_unsicherem_Code|Any CPU.ActiveCfg = Release_mit_unsicherem_Code|Any CPU
 		{B8E7D9D9-CE00-4B33-8FC0-4AC062D30436}.Release_mit_unsicherem_Code|Any CPU.Build.0 = Release_mit_unsicherem_Code|Any CPU
 		{B8E7D9D9-CE00-4B33-8FC0-4AC062D30436}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -79,6 +101,10 @@ Global
 		{B8E7D9D9-CE00-4B33-8FC0-4AC062D30436}.Release-ohne-Trace|Any CPU.Build.0 = Release-ohne-Trace|Any CPU
 		{117B6E4B-4DCF-41B4-83F4-88727C3CFD6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{117B6E4B-4DCF-41B4-83F4-88727C3CFD6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{117B6E4B-4DCF-41B4-83F4-88727C3CFD6B}.Meine Konfig|Any CPU.ActiveCfg = Meine Konfig|Any CPU
+		{117B6E4B-4DCF-41B4-83F4-88727C3CFD6B}.Meine Konfig|Any CPU.Build.0 = Meine Konfig|Any CPU
+		{117B6E4B-4DCF-41B4-83F4-88727C3CFD6B}.pcc-2017-04|Any CPU.ActiveCfg = pcc-2017-04|Any CPU
+		{117B6E4B-4DCF-41B4-83F4-88727C3CFD6B}.pcc-2017-04|Any CPU.Build.0 = pcc-2017-04|Any CPU
 		{117B6E4B-4DCF-41B4-83F4-88727C3CFD6B}.Release_mit_unsicherem_Code|Any CPU.ActiveCfg = Release_mit_unsicherem_Code|Any CPU
 		{117B6E4B-4DCF-41B4-83F4-88727C3CFD6B}.Release_mit_unsicherem_Code|Any CPU.Build.0 = Release_mit_unsicherem_Code|Any CPU
 		{117B6E4B-4DCF-41B4-83F4-88727C3CFD6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -87,6 +113,10 @@ Global
 		{117B6E4B-4DCF-41B4-83F4-88727C3CFD6B}.Release-ohne-Trace|Any CPU.Build.0 = Release-ohne-Trace|Any CPU
 		{F95D9C3F-7166-451F-8C25-0911FED62D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F95D9C3F-7166-451F-8C25-0911FED62D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F95D9C3F-7166-451F-8C25-0911FED62D99}.Meine Konfig|Any CPU.ActiveCfg = Meine Konfig|Any CPU
+		{F95D9C3F-7166-451F-8C25-0911FED62D99}.Meine Konfig|Any CPU.Build.0 = Meine Konfig|Any CPU
+		{F95D9C3F-7166-451F-8C25-0911FED62D99}.pcc-2017-04|Any CPU.ActiveCfg = pcc-2017-04|Any CPU
+		{F95D9C3F-7166-451F-8C25-0911FED62D99}.pcc-2017-04|Any CPU.Build.0 = pcc-2017-04|Any CPU
 		{F95D9C3F-7166-451F-8C25-0911FED62D99}.Release_mit_unsicherem_Code|Any CPU.ActiveCfg = Release_mit_unsicherem_Code|Any CPU
 		{F95D9C3F-7166-451F-8C25-0911FED62D99}.Release_mit_unsicherem_Code|Any CPU.Build.0 = Release_mit_unsicherem_Code|Any CPU
 		{F95D9C3F-7166-451F-8C25-0911FED62D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -95,6 +125,10 @@ Global
 		{F95D9C3F-7166-451F-8C25-0911FED62D99}.Release-ohne-Trace|Any CPU.Build.0 = Release-ohne-Trace|Any CPU
 		{426CCDBB-23B4-4121-A606-2E85DAA15B14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{426CCDBB-23B4-4121-A606-2E85DAA15B14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{426CCDBB-23B4-4121-A606-2E85DAA15B14}.Meine Konfig|Any CPU.ActiveCfg = Meine Konfig|Any CPU
+		{426CCDBB-23B4-4121-A606-2E85DAA15B14}.Meine Konfig|Any CPU.Build.0 = Meine Konfig|Any CPU
+		{426CCDBB-23B4-4121-A606-2E85DAA15B14}.pcc-2017-04|Any CPU.ActiveCfg = pcc-2017-04|Any CPU
+		{426CCDBB-23B4-4121-A606-2E85DAA15B14}.pcc-2017-04|Any CPU.Build.0 = pcc-2017-04|Any CPU
 		{426CCDBB-23B4-4121-A606-2E85DAA15B14}.Release_mit_unsicherem_Code|Any CPU.ActiveCfg = Release_mit_unsicherem_Code|Any CPU
 		{426CCDBB-23B4-4121-A606-2E85DAA15B14}.Release_mit_unsicherem_Code|Any CPU.Build.0 = Release_mit_unsicherem_Code|Any CPU
 		{426CCDBB-23B4-4121-A606-2E85DAA15B14}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -103,6 +137,10 @@ Global
 		{426CCDBB-23B4-4121-A606-2E85DAA15B14}.Release-ohne-Trace|Any CPU.Build.0 = Release-ohne-Trace|Any CPU
 		{983B87DE-9456-48F8-8FF1-3FDC94A38826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{983B87DE-9456-48F8-8FF1-3FDC94A38826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{983B87DE-9456-48F8-8FF1-3FDC94A38826}.Meine Konfig|Any CPU.ActiveCfg = Meine Konfig|Any CPU
+		{983B87DE-9456-48F8-8FF1-3FDC94A38826}.Meine Konfig|Any CPU.Build.0 = Meine Konfig|Any CPU
+		{983B87DE-9456-48F8-8FF1-3FDC94A38826}.pcc-2017-04|Any CPU.ActiveCfg = pcc-2017-04|Any CPU
+		{983B87DE-9456-48F8-8FF1-3FDC94A38826}.pcc-2017-04|Any CPU.Build.0 = pcc-2017-04|Any CPU
 		{983B87DE-9456-48F8-8FF1-3FDC94A38826}.Release_mit_unsicherem_Code|Any CPU.ActiveCfg = Release_mit_unsicherem_Code|Any CPU
 		{983B87DE-9456-48F8-8FF1-3FDC94A38826}.Release_mit_unsicherem_Code|Any CPU.Build.0 = Release_mit_unsicherem_Code|Any CPU
 		{983B87DE-9456-48F8-8FF1-3FDC94A38826}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -111,6 +149,10 @@ Global
 		{983B87DE-9456-48F8-8FF1-3FDC94A38826}.Release-ohne-Trace|Any CPU.Build.0 = Release-ohne-Trace|Any CPU
 		{CA38FEA6-64FB-4001-9B18-AEA83D35CED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CA38FEA6-64FB-4001-9B18-AEA83D35CED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA38FEA6-64FB-4001-9B18-AEA83D35CED9}.Meine Konfig|Any CPU.ActiveCfg = Meine Konfig|Any CPU
+		{CA38FEA6-64FB-4001-9B18-AEA83D35CED9}.Meine Konfig|Any CPU.Build.0 = Meine Konfig|Any CPU
+		{CA38FEA6-64FB-4001-9B18-AEA83D35CED9}.pcc-2017-04|Any CPU.ActiveCfg = pcc-2017-04|Any CPU
+		{CA38FEA6-64FB-4001-9B18-AEA83D35CED9}.pcc-2017-04|Any CPU.Build.0 = pcc-2017-04|Any CPU
 		{CA38FEA6-64FB-4001-9B18-AEA83D35CED9}.Release_mit_unsicherem_Code|Any CPU.ActiveCfg = Release_mit_unsicherem_Code|Any CPU
 		{CA38FEA6-64FB-4001-9B18-AEA83D35CED9}.Release_mit_unsicherem_Code|Any CPU.Build.0 = Release_mit_unsicherem_Code|Any CPU
 		{CA38FEA6-64FB-4001-9B18-AEA83D35CED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -119,6 +161,10 @@ Global
 		{CA38FEA6-64FB-4001-9B18-AEA83D35CED9}.Release-ohne-Trace|Any CPU.Build.0 = Release-ohne-Trace|Any CPU
 		{424838BB-991E-488F-8657-2FDE850D5B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{424838BB-991E-488F-8657-2FDE850D5B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{424838BB-991E-488F-8657-2FDE850D5B77}.Meine Konfig|Any CPU.ActiveCfg = Meine Konfig|Any CPU
+		{424838BB-991E-488F-8657-2FDE850D5B77}.Meine Konfig|Any CPU.Build.0 = Meine Konfig|Any CPU
+		{424838BB-991E-488F-8657-2FDE850D5B77}.pcc-2017-04|Any CPU.ActiveCfg = pcc-2017-04|Any CPU
+		{424838BB-991E-488F-8657-2FDE850D5B77}.pcc-2017-04|Any CPU.Build.0 = pcc-2017-04|Any CPU
 		{424838BB-991E-488F-8657-2FDE850D5B77}.Release_mit_unsicherem_Code|Any CPU.ActiveCfg = Release_mit_unsicherem_Code|Any CPU
 		{424838BB-991E-488F-8657-2FDE850D5B77}.Release_mit_unsicherem_Code|Any CPU.Build.0 = Release_mit_unsicherem_Code|Any CPU
 		{424838BB-991E-488F-8657-2FDE850D5B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -127,6 +173,10 @@ Global
 		{424838BB-991E-488F-8657-2FDE850D5B77}.Release-ohne-Trace|Any CPU.Build.0 = Release-ohne-Trace|Any CPU
 		{A34C75CD-3259-408D-B2FD-CD77A2E383A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A34C75CD-3259-408D-B2FD-CD77A2E383A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A34C75CD-3259-408D-B2FD-CD77A2E383A7}.Meine Konfig|Any CPU.ActiveCfg = Meine Konfig|Any CPU
+		{A34C75CD-3259-408D-B2FD-CD77A2E383A7}.Meine Konfig|Any CPU.Build.0 = Meine Konfig|Any CPU
+		{A34C75CD-3259-408D-B2FD-CD77A2E383A7}.pcc-2017-04|Any CPU.ActiveCfg = pcc-2017-04|Any CPU
+		{A34C75CD-3259-408D-B2FD-CD77A2E383A7}.pcc-2017-04|Any CPU.Build.0 = pcc-2017-04|Any CPU
 		{A34C75CD-3259-408D-B2FD-CD77A2E383A7}.Release_mit_unsicherem_Code|Any CPU.ActiveCfg = Release_mit_unsicherem_Code|Any CPU
 		{A34C75CD-3259-408D-B2FD-CD77A2E383A7}.Release_mit_unsicherem_Code|Any CPU.Build.0 = Release_mit_unsicherem_Code|Any CPU
 		{A34C75CD-3259-408D-B2FD-CD77A2E383A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -135,6 +185,10 @@ Global
 		{A34C75CD-3259-408D-B2FD-CD77A2E383A7}.Release-ohne-Trace|Any CPU.Build.0 = Release-ohne-Trace|Any CPU
 		{97729D9C-E3BA-43AB-B14C-D8FDBE1BB8BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{97729D9C-E3BA-43AB-B14C-D8FDBE1BB8BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97729D9C-E3BA-43AB-B14C-D8FDBE1BB8BF}.Meine Konfig|Any CPU.ActiveCfg = Meine Konfig|Any CPU
+		{97729D9C-E3BA-43AB-B14C-D8FDBE1BB8BF}.Meine Konfig|Any CPU.Build.0 = Meine Konfig|Any CPU
+		{97729D9C-E3BA-43AB-B14C-D8FDBE1BB8BF}.pcc-2017-04|Any CPU.ActiveCfg = pcc-2017-04|Any CPU
+		{97729D9C-E3BA-43AB-B14C-D8FDBE1BB8BF}.pcc-2017-04|Any CPU.Build.0 = pcc-2017-04|Any CPU
 		{97729D9C-E3BA-43AB-B14C-D8FDBE1BB8BF}.Release_mit_unsicherem_Code|Any CPU.ActiveCfg = Release|Any CPU
 		{97729D9C-E3BA-43AB-B14C-D8FDBE1BB8BF}.Release_mit_unsicherem_Code|Any CPU.Build.0 = Release|Any CPU
 		{97729D9C-E3BA-43AB-B14C-D8FDBE1BB8BF}.Release|Any CPU.ActiveCfg = Release|Any CPU

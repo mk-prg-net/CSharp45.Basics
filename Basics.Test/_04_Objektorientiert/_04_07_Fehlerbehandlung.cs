@@ -38,10 +38,66 @@ namespace Basics.Test._04_Objektorientiert
             }
             catch (Exception ex)
             {
-                throw new Exception("Catch Handeler von up2", ex);
+                throw new Exception(mko.TraceHlp.FormatErrMsg("Test Fehlerbehandlung", "up2"), ex);
             }
-            
         }
+
+        static void ThrowIfvon_gt_bis(double von, double bis)
+        {
+            if(von > bis)
+            {
+                throw new Exception(mko.TraceHlp.FormatErrMsg("TestEx", "up3", "von ist größer als bis !"));
+            }
+        }
+
+        static void ThrowIfvon_lt_1(double von)
+        {
+            if (von <= 1)
+            {
+                throw new Exception(mko.TraceHlp.FormatErrMsg("TextEx", "up3", "von ist kleiner 1"));
+            }
+        }
+
+
+        static void up3(double von, double bis)
+        {
+            if (von <= bis)
+            {
+                if (von > 1)
+                {
+                    double laenge = bis - von;
+                } else
+                {
+                    throw new Exception(mko.TraceHlp.FormatErrMsg("TextEx", "up3", "von ist kleiner 1"));
+                }
+            }
+            else
+            {
+                throw new Exception(mko.TraceHlp.FormatErrMsg("TestEx", "up3", "von ist größer als bis !"));
+
+            }
+        }
+
+        static void up31(double von, double bis)
+        {
+            // Vorbedingungen des Programmes
+            ThrowIfvon_gt_bis(von, bis);
+            ThrowIfvon_lt_1(von);
+
+            double laenge = bis - von;
+
+        }
+
+        static void up32(double von, double bis)
+        {
+            // Vorbedingungen des Programmes
+            mko.TraceHlp.ThrowArgExIfNot(von <= bis, "von ist größer als bis");
+            mko.TraceHlp.ThrowArgExIfNot(von > 1, "von ist kleiner als 1");
+
+            double laenge = bis - von;
+
+        }
+
 
         [TestMethod]
         public void TestMethod1()
@@ -97,6 +153,15 @@ namespace Basics.Test._04_Objektorientiert
                 }
 
                 Debug.WriteLine(mko.ExceptionHelper.FlattenExceptionMessages(ex));
+            }
+
+
+            try
+            {
+                up32(2, 1);
+            }catch(Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
             }
 
         }

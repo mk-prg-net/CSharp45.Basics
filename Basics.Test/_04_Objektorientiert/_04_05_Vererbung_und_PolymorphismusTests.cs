@@ -18,10 +18,27 @@ namespace Basics._04_Objektorientiert
         //    mko.Newton.Init.Do();
         //}
 
+        const double MyPi = 3.1427777777;
+
+
+        /// <summary>
+        /// Achtung: von versiegelten Klassen kann man nicht ableiten
+        /// </summary>
+        class SpezialStoppUhr // : Basics._04_Objektorientiert.StoppUhr
+        {
+            public void StoppZwischenzeit() {
+                throw new NotImplementedException();
+            }
+        }
+
 
         [TestMethod]
         public void Autobahntest()
         {
+            // MyPi = 4.123;
+
+
+
             Autobahn.Benzinauto FredVollgas = new Autobahn.Benzinauto("Ferrari", "F4");
             Autobahn.Dieselauto RudiNormalo = new Autobahn.Dieselauto("VW", "Passat TDI");
             //Autobahn.Auto allgAuto = new Autobahn.Auto();
@@ -37,10 +54,14 @@ namespace Basics._04_Objektorientiert
 
             //allgAuto.tankenPolymorph(100);
 
+            RudiNormalo.tanken(20);
+
             // as Cast fürht bei Typinkompatibilität zur Rückgabe eines null- Wertes
             Autobahn.Auto RudiNormaloAlsAuto = RudiNormalo; // as Autobahn.Auto;
-            RudiNormalo.tanken(20);
-            RudiNormaloAlsBasisklasse.tanken(20);
+            RudiNormaloAlsAuto.tanken(20);
+
+            
+            
             FredVollgas.tanken(30);
 
             RudiNormaloAlsAuto.tanken(30);

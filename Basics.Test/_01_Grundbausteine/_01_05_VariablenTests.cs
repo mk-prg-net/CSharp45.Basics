@@ -9,6 +9,28 @@ namespace Basics.Test._01_Grundbausteine
     [TestClass]
     public class _01_05_VariablenTests
     {
+
+        [TestMethod]
+        public void Typinformationen()
+        {
+            var Seife = new Basics.PriceDbl(2.99, CurrencySymbols.EUR);
+
+            var typInfo = Seife.GetType();
+
+            Assert.AreEqual("PriceDbl", typInfo.Name);
+
+            var typInfo2 = typeof(Basics.PriceDbl);
+
+            // typeof darf nur auf Klassen angewendet werden.
+            // var typInfo3 = typeof(Seife);
+
+
+            Assert.AreEqual(typInfo, typInfo2);
+
+
+
+        }
+
         [TestMethod]
         public void _01_05_01_Variablen_NamenUndDeklarationTest()
         {
@@ -127,6 +149,10 @@ namespace Basics.Test._01_Grundbausteine
         [TestMethod]
         public void _01_05_09_ZugriffsmodifikatorenTest()
         {
+
+            var demo = new Basics._01_Grundbausteine.DemoZugriffsmodifikatoren();
+            Assert.AreEqual(null, demo.text);
+
             // Konstanten verhalten sich wie static, sind also über den Name der Klasse erreichbar
             Debug.WriteLine(Basics._01_Grundbausteine._01_05_Variablen.PI);
 
@@ -229,6 +255,9 @@ namespace Basics.Test._01_Grundbausteine
 
                 // ist gleichwertig zu quotient = quotient / quotient2;
                 quotient /= quotient2;
+
+                double nenner = double.PositiveInfinity;
+                quotient = 1 / nenner;
 
 
 

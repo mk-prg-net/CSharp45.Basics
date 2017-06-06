@@ -33,7 +33,7 @@ namespace Basics
         // angesprochen. Problem: Der Zugriff auf den 
         // inneren Zustand und die Implementierung des 
         // Zustandes sind nicht voneineander getrennt
-        public double X;
-        public double Y;
+        public double X { get; set; }
+        public double Y { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace Basics
 
         public enum Operators
         {
-            mean, min, max
+            mean, min, max, varianz
         }
 
 
@@ -21,9 +21,20 @@ namespace Basics
         {
             get
             {
+                // yield ist eine Anweisung an den Compiler der Art:
+                // Beim 1. Aufruf von .MoveNext(), .Current -> Operators.mean.ToString();
                 yield return Operators.mean.ToString();
+
+                // ... beim 2. Aufruf von .MoveNext(), .Current -> Operators.min.ToString();
                 yield return Operators.min.ToString();
+
+                // ... beim 3. Aufruf von .MoveNext(), .Current -> Operators.max.ToString();
                 yield return Operators.max.ToString();
+
+                // ... beim 4. Aufruf von .MoveNext(), .Current -> Operators.varianz.ToString();
+                yield return Operators.varianz.ToString();
+
+                // yield wird nicht zur Laufzeit, sondern zur Entwurfszeit ausgeführt durch den Compiler
             }
         }
 
@@ -35,6 +46,9 @@ namespace Basics
         /// <returns></returns>
         public static IEnumerable<int> IndexGenerator(int max)
         {
+            // Achtung: die for- Schleife wird nicht zur Laufzeit ausgeführt
+            // for ist rein symbolisch, und der Compiler liest aus der for- Schleife ab,
+            // das 0- max yield- Anweisungen zu definieren sind
             for (int i = 0; i <= max; i++)
                 yield return i;
 

@@ -13,8 +13,37 @@ namespace Basics._01_Grundbausteine
 
     public class DemoZugriffsmodifikatoren
     {
+        /// <summary>
+        /// nicht initialisierter String: Member werde dann implizit initialisiert
+        /// </summary>
+        public string text;
+
         public void Zugriff()
         {
+            // lokale Variablen müssen initialisiert werden
+            int i = 0;
+            i++;
+
+
+            int k = 0;
+            k++;
+
+            {
+                // Fehler, da k bereits definiert...
+                //double k = 0.0;
+                //k++;
+            }
+
+
+            {
+                int j = 0;
+                j++;
+            }
+
+            {
+                int j = -99;
+                j++;
+            }
 
             // Zugriff auf statische Member erfordern kein Objekt. Sie sind direkt der Klasse untergeordnet
             _01_05_Variablen.id_static = 99;
@@ -56,6 +85,9 @@ namespace Basics._01_Grundbausteine
             MwSt = 0.19;
 
         }
+
+
+        
 
         public void UmgangMitKonstanten()
         {

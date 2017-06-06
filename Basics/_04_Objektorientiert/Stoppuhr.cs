@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Basics._04_Objektorientiert
 {
-    public class StoppUhr
+    /// <summary>
+    /// StoppUhr als versiegelte Klasse (sealed). Keine weiteren Ableitungen sind 
+    /// möglich
+    /// </summary>
+    public sealed class StoppUhr
     {
 
         // Innerer Zustand: hier werden Informationen im Objekt gespeichert
@@ -112,11 +116,14 @@ namespace Basics._04_Objektorientiert
         // modern als Eigenschaft
         public string Name
         {
+            // Compiler wandelt get{ ... } um in string get() {...}
             get
             {
                 return _Name;
             }
 
+            // Setter dient zum Setzen neuer Informationen in einer Eigenschaft
+            // Compiler wandelt set{ ... } um in void set(double value) {...}
             set
             {
                 _Name = value;
@@ -127,6 +134,8 @@ namespace Basics._04_Objektorientiert
 
         // Wenn der innere Zustand nur eine Variable ist, dann gehts auch einfacher
         public string Name2 { get; set; }
+
+        //string _Name2;
 
         int _einWert;
         public int NurLesbar

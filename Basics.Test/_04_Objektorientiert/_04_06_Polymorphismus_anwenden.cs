@@ -22,7 +22,7 @@ namespace Basics._04_Objektorientiert
             MyCounter.EventProgress += new DMS.DirTree.DGEventProgress(ProgressInfo);
 
             // das zu untersuchende Verzeichnis scannen
-            MyCounter.scanDir(@"C:\Users\Schulung\Documents\Visual Studio 2012\Projects\Bildergalerie");
+            MyCounter.scanDir("C:\\Users\\Public\\Pictures\\Sample Pictures");
 
             // Ergebnis ausgeben
             Debug.WriteLine("Anz. JPG- Dateien = " + MyCounter.Count);

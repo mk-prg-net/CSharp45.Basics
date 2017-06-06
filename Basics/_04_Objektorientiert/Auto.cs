@@ -239,6 +239,6 @@ namespace Basics._04_Objektorientiert.Autobahn
 
         //
         public int SchadensfreiheitklasseSimpel { get; set; }
-
+        
     }
 }

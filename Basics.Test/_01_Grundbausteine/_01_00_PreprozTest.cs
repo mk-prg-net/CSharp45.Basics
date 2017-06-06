@@ -62,7 +62,9 @@ namespace Basics.Test._01_Grundbausteine
             // von Visual Studio eingestellt werden
 #if(DEBUG)
             Debug.WriteLine("Bin im Debug- Zweig");
-#elif(TRACE)
+#endif
+
+#if (TRACE)
             Trace.WriteLine("Bin im nicht Debug- Zweig");
 #endif
 

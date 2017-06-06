@@ -26,7 +26,7 @@ namespace Basics
             this.Y = Y;           
         }
 
-        public double X;
-        public double Y;
+        public double X; // { get; set; }
+        public double Y; // { get; set; }
     }
 }
