@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>DirTree</id>
+    <version>2.0.1.0</version>
+    <title>DirTree</title>
+    <authors>www.mkoIt.de</authors>
+    <owners>www.mkoIt.de</owners>
+    <licenseUrl>http://www.mkoit.de/woc.aspx?path=Wissen.beispielsoftware.lizenz_beispielsoftware</licenseUrl>
+    <projectUrl>http://www.mkoit.de/woc.aspx?path=Wissen.beispielsoftware.DirTree</projectUrl>
+    <iconUrl>http://www.mkoit.de/mko-Logo-2-1.gif</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Dateibaumscanner</description>
+    <releaseNotes />
+    <copyright>Copyright Martin Korneffel, Stuttgart 2013</copyright>
+    <tags>Dateibaum Traversieren</tags>
+    <references>
+      <reference file="DirTree.dll" />
+    </references>
+  </metadata>
+</package>

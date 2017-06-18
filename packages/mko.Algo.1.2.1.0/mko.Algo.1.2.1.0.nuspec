@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>mko.Algo</id>
+    <version>1.2.1.0</version>
+    <title>mko.Algo</title>
+    <authors>www.mkoit.de</authors>
+    <owners>www.mkoit.de</owners>
+    <licenseUrl>http://www.mkoit.de/woc.aspx?path=Wissen.beispielsoftware.lizenz_beispielsoftware</licenseUrl>
+    <projectUrl>http://www.mkoit.de/woc.aspx?path=Wissen.beispielsoftware.mko_algo</projectUrl>
+    <iconUrl>http://www.mkoit.de/mko-Logo-2-1.gif</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>mko.Algo: Sammlung algemeiner Algorithmen;</description>
+    <releaseNotes />
+    <copyright>Copyright Martin Korneffel, Stuttgart 2013</copyright>
+    <tags>Primzahlen Listenverarbeitung Graphentheorie Funktoren</tags>
+    <dependencies>
+      <dependency id="mko" version="7.1.4.0" />
+    </dependencies>
+  </metadata>
+</package>
