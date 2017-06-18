@@ -27,6 +27,8 @@ namespace Basics
             // des aktuellen Objektes zugegriffen. Hingegen ist X der zugriff auf den Parameter X des aktuellen Konstruktors
             this.X = X;
             this.Y = Y;
+
+            Point.Z = 99;
         }
 
         // Die X und Y- Koordinaten werden über Felder
@@ -35,5 +37,14 @@ namespace Basics
         // Zustandes sind nicht voneineander getrennt
         public double X { get; set; }
         public double Y { get; set; }
+
+        public static double Z { get; set; }
+
+
+        //public double DEuklid(Point this)
+        public double DEuklid()
+        {
+            return Math.Sqrt(this.X * this.X + this.Y * this.Y);
+        }
     }
 }

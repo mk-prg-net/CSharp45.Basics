@@ -23,15 +23,18 @@ namespace Basics._01_Grundbausteine
         // Unterprogrammblock
         public void Unterprogramm()
         {
+            int i = 0;
+
             // Schleifenblock
-            while (true)
+            while (i < 2)
             {
+                i++;
                 // Bedingter Anweisungsblock
                 if (true)
                 {
                     // Anonymer Block 1
                     {
-                        int x = 99;
+                        int x = EineStatischeVariable;
 
                         // Anonymer Block 2
                         {

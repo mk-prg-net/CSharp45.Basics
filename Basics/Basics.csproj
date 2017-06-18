@@ -33,7 +33,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>mk-prg-net.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>Mein_neuer_Schluessel.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-ohne-Trace|AnyCPU'">
     <OutputPath>bin\Release-ohne-Trace\</OutputPath>
@@ -71,6 +71,15 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'jena06_2017|AnyCPU'">
+    <OutputPath>bin\jena06_2017\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DirTree, Version=2.0.1.0, Culture=neutral, PublicKeyToken=65a6fe3e6295e9ab, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -100,20 +109,20 @@
       <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="mko, Version=7.1.5.0, Culture=neutral, PublicKeyToken=f4d93f46e53e0656, processorArchitecture=MSIL">
-      <HintPath>..\packages\mko.7.1.5.0\lib\net45\mko.dll</HintPath>
+    <Reference Include="mko, Version=7.3.3.0, Culture=neutral, PublicKeyToken=f4d93f46e53e0656, processorArchitecture=MSIL">
+      <HintPath>..\packages\mko.7.3.3\lib\net45\mko.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="mko.Algo, Version=1.1.3.0, Culture=neutral, PublicKeyToken=f4d93f46e53e0656, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\mko.Algo.1.1.3.0\lib\net45\mko.Algo.dll</HintPath>
+    <Reference Include="mko.Algo, Version=1.2.2.0, Culture=neutral, PublicKeyToken=f4d93f46e53e0656, processorArchitecture=MSIL">
+      <HintPath>..\packages\mko.Algo.1.2.2\lib\net45\mko.Algo.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="mko.Euklid, Version=1.1.1.0, Culture=neutral, PublicKeyToken=f4d93f46e53e0656, processorArchitecture=MSIL">
       <HintPath>..\packages\mko.Euklid.1.1.1.0\lib\net45\mko.Euklid.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="mko.Newton, Version=1.1.2.0, Culture=neutral, PublicKeyToken=f4d93f46e53e0656, processorArchitecture=MSIL">
-      <HintPath>..\packages\mko.Newton.1.1.2.0\lib\net45\mko.Newton.dll</HintPath>
+    <Reference Include="mko.Newton, Version=1.1.3.0, Culture=neutral, PublicKeyToken=f4d93f46e53e0656, processorArchitecture=MSIL">
+      <HintPath>..\packages\mko.Newton.1.1.3\lib\net45\mko.Newton.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -226,6 +235,7 @@
     <None Include="ClassDiagram6.cd" />
     <None Include="DasSonnensystem.cd" />
     <None Include="MeinSchlüssel.snk" />
+    <None Include="Mein_neuer_Schluessel.snk" />
     <None Include="mk-prg-net.snk" />
     <None Include="packages.config" />
   </ItemGroup>

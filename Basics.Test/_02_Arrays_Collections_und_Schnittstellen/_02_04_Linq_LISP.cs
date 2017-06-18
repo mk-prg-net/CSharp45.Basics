@@ -205,7 +205,7 @@ namespace Basics.Test.LISP
 
 
 
-            var Preisliste_in_Euro_gefiltert_und_sortiert = Preisliste.Where(p => p.ToUSD() >= 1.0 && p.ToUSD() <= 5.0)
+            var Preisliste_in_Euro_gefiltert_und_sortiert = Preisliste.AsParallel().Where(p => p.ToUSD() >= 1.0 && p.ToUSD() <= 5.0)
                                                                         .OrderBy(p => p.ToUSD())
                                                                         .Select(p => p.ToUSD() * 0.89)
                                                                         .ToArray();

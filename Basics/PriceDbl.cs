@@ -16,10 +16,6 @@ namespace Basics
         {
             get
             {
-                //if (_Instance == null)
-                //{
-                //    _Instance = new PriceDbl(1, CurrencySymbols.USD);
-                //}
 
                 if (_Instance.Value == 0)
                 {
@@ -36,31 +32,8 @@ namespace Basics
 
         // nummerischer Anteil eines Preises
         public double Value; //{ get; set; }
-        //{
-        //    get {
-        //        return _Value;
-        //    } 
-        //    set{
-        //        _Value = value;
-        //    }
-        //}
-        // double _Value;
-
         // Währungssymbol
         public CurrencySymbols CurSym;
-        // {
-        //    get
-        //    {
-        //        return _CurSym;
-        //    }
-        //    set
-        //    {
-        //        _CurSym = value;
-        //    }
-        //}
-        //CurrencySymbols _CurSym;
-        //readonly double exRateSFr;
-        //readonly double exRateEur;
 
         // Konstruktor (Initialisierungroutine), die das Anlegen
         // eines Preises erkleichtert
@@ -78,20 +51,6 @@ namespace Basics
         }
 
 
-        //public double ExchangeRateToUSD_InstanceMethod(CurrencySymbols From)
-        //{
-        //    // Kurse vom 13.10.2014
-        //    switch (From)
-        //    {
-        //        case CurrencySymbols.EUR:
-        //            return exRateEur;
-        //        case CurrencySymbols.SFr:
-        //            return exRateSFr;
-        //        case CurrencySymbols.USD:
-        //            return 1.0;
-        //        default: throw new ArgumentOutOfRangeException(From.ToString());
-        //    }
-        //}
 
         /// <summary>
         /// Liefert den Wechselkurs für den Umtausch einer Währung in USD
@@ -151,47 +110,41 @@ namespace Basics
             return Value.ToString() + " " + CurSym.ToString();
         }
 
-        //public int CompareTo(object obj)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //int IComparable.CompareTo(object obj)
-        //{
-        //    // 1. Konvertieren von obj in ein PriceDbl
-        //    PriceDbl derAnderePreis = (PriceDbl)obj;
-
-        //    // 2. Vergleichen auf Basis von USD
-        //    if (this.ToUSD() < derAnderePreis.ToUSD())
-        //        return -1;
-        //    else if (this.ToUSD() > derAnderePreis.ToUSD())
-        //        return 1;
-        //    else
-        //        return 0;
-        //}
-
         public int CompareTo(object obj)
         {
-            // Downcast von object in PreisDBL
             PriceDbl derAnderePreis = (PriceDbl)obj;
 
-            int res = 0;
-
             if (this.ToUSD() < derAnderePreis.ToUSD())
-            {
-                res = -1;
-            }
+                return -1;
             else if (this.ToUSD() > derAnderePreis.ToUSD())
-            {
-                res = 1;
-            }
+                return 1;
             else
-            {
-                res = 0;
-            }
-
-            return res;
-
+                return 0;
         }
+
+
+        //public int CompareTo(object obj)
+        //{
+        //    // Downcast von object in PreisDBL
+        //    PriceDbl derAnderePreis = (PriceDbl)obj;
+
+        //    int res = 0;
+
+        //    if (this.ToUSD() < derAnderePreis.ToUSD())
+        //    {
+        //        res = -1;
+        //    }
+        //    else if (this.ToUSD() > derAnderePreis.ToUSD())
+        //    {
+        //        res = 1;
+        //    }
+        //    else
+        //    {
+        //        res = 0;
+        //    }
+
+        //    return res;
+
+        //}
     }
 }

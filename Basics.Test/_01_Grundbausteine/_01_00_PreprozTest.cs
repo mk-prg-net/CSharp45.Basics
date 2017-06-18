@@ -1,6 +1,6 @@
 ﻿// Eine Preprozessorkonstante deklarieren
-//#define MeinePreProzKonstante
-// #define DEBUG
+#define MeinePreProzKonstante
+//#define DEBUG
 
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -28,6 +28,7 @@ namespace Basics.Test._01_Grundbausteine
             //ts.Level = TraceLevel.Info;
 
             var ts2 = new System.Diagnostics.TraceSwitch("MySecoundSwitch", "...");
+            //ts2.Level = TraceLevel.Error;
 
             Debug.WriteLine("Hallo Ausgabefenster");
             Trace.WriteLine("Hallo Ausgabefenster (Gruss von Trace)");
@@ -44,6 +45,12 @@ namespace Basics.Test._01_Grundbausteine
             Trace.WriteLineIf(ts2.TraceInfo, "Eine Info 2");
             Trace.WriteLineIf(ts2.TraceVerbose, "Eine audführliche Meldung 2");
 
+            // Zugriff auf die Settings in der app.config
+            Debug.WriteLine(Properties.Settings.Default.MeineKonstante);
+
+            double x = 1 / 0.0;
+
+            Debug.Assert(x < 100, "x ist unzulässigerweise größer als 100");
 
             // Auswerten der PreProzKonstante
 #if(MeinePreProzKonstante)
@@ -73,7 +80,7 @@ namespace Basics.Test._01_Grundbausteine
             Debug.WriteLine("Diese Ausgabe erfolgt nur, wenn die PreProzKonstante DEBUG gesetzt ist");
             Trace.WriteLine("Diese Ausgabe erfolgt nur, wenn die PreProzKonstante TRACE gesetzt ist");
 
-            Trace.WriteLine(mko.TraceHlp.FormatErrMsg("Basic.Test", "_01_00_PreProzTest1", "Eine Fehlermeldung"));
+            Trace.WriteLine(mko.TraceHlp.FormatErrMsg(this, "_01_00_PreProzTest1", "Eine Fehlermeldung"));
             Debug.WriteLine(mko.TraceHlp.FormatWarningMsg("Basic.Test", "_01_00_PreProzTest1", "Eine Warnung"));
             Debug.WriteLine(mko.TraceHlp.FormatInfoMsg("Basic.Test", "_01_00_PreProzTest1", "Eine Info"));
 

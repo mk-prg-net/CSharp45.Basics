@@ -117,7 +117,7 @@ namespace Basics.Test._01_Grundbausteine
             var gbt1 = new DateTime(1990, 2, 22);
 
 
-            var meineAdHocStruktur = new { X = 99.0, Y = 22 };
+            var meineAdHocStruktur = new { X = 99.0, Y = 22 };            
 
             //meineAdHocStruktur.X = 77.0;
                         
@@ -126,6 +126,7 @@ namespace Basics.Test._01_Grundbausteine
 
             //meineAdHocStruktur.Z = 33;
             //meineAdHocStruktur = new { X = 99, Y = 22, Z = 33 };
+            double xcopie = meineAdHocStruktur.X;
             Assert.AreEqual(99, meineAdHocStruktur.X);
 
         }

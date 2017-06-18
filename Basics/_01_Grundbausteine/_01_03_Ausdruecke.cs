@@ -39,6 +39,8 @@ namespace Basics._01_Grundbausteine
         /// <returns></returns>
         public static int GGT(int a, int b)
         {
+            int sum_ab = a + b;
+
             // Kombinierter Einstaz von ternären Operator und der Identität
             return b == 0 ? a : GGT(b, a % b);
         }

@@ -35,7 +35,7 @@ namespace Basics.Test._02_Arrays_und_Collections
             Assert.AreEqual(13, primzahlen[5]);
 
             int summePrim = 0;
-            for (int i = 0; i < primzahlen.Length; i++)
+            for (int i = 0, count = primzahlen.Length; i < count; i++)
                 summePrim += primzahlen[i];
 
             // Schleife, die alle Elemente in einem Array besucht
@@ -131,7 +131,7 @@ namespace Basics.Test._02_Arrays_und_Collections
                                  };
 
                 // Preisliste sortierbar, da Preis die IComparable- Schnittstelle implementiert
-                Array.Sort(Preisliste);
+                Array.Sort(Preisliste);                
 
                 // Alternative zum Zwang IComparable zu impelemntieren ist LINQ
                 PriceDbl[] Preisliste2 = {

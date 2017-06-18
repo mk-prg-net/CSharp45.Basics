@@ -83,7 +83,9 @@ namespace Basics._01_Grundbausteine
         /// <returns></returns>
         public static Point PolarToCartesian(double r, double phi_in_rad)
         {
-            return new Point() { X = r * Math.Sin(phi_in_rad), Y = r * Math.Cos(phi_in_rad) };
+            //return new Point() { X = r * Math.Sin(phi_in_rad), Y = r * Math.Cos(phi_in_rad) };
+
+            return new Point(r * Math.Sin(phi_in_rad), r * Math.Cos(phi_in_rad));
         }
 
         /// <summary>

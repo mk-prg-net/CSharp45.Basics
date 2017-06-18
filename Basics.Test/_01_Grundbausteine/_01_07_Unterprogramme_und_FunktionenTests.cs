@@ -12,11 +12,16 @@ namespace Basics.Test._01_Grundbausteine
         public void _01_07_Unterprogramme_und_FunktionenTest()
         {
 
+
             var l = Ctx.Length(Ctx.CreatePoint(2, 9));
 
             var p2 = Ctx.CreatePoint();
             Assert.AreEqual(99.0, p2.X);
             Assert.AreEqual(99.0, p2.Y);
+
+            // Compiler baut folgenden Aufruf um in:
+            // Point.DEuklid(p2);
+            p2.DEuklid();
 
             // Variante 1: Punktobj wird in Getpoint erzeugt
             l = Ctx.Length(Ctx.GetPoint(1));
@@ -42,19 +47,25 @@ namespace Basics.Test._01_Grundbausteine
             Assert.IsTrue(Math.Abs(posFlugzeug.X - posFlugzeug.Y) < 0.01);
             Assert.AreEqual(1000.0, posFlugzeug.Y, 0.01);
 
+            // Vorteil der Rückgabe als Objekt: Funktion kann im Kontextx eines komplexeren Ausdruckes 
+            // aufgerufen werden
+            var posKorr = Ctx.Add(Ctx.PolarToCartesian(Math.Sqrt(2) * 1000, Math.PI / 4.0), new Point(-100, -200));
+
 
             double r = Math.Sqrt(2) * 1000;
             double phi = Math.PI / 4.0;
 
             // Unterprogramm mit out- Parameter
-            double abstand = 99, hoehe;
+            double abstand; //, hoehe;
+            double hoehe;
             Ctx.PolarToCartesian(r, phi, out abstand, out hoehe);
 
             // Unterprogramm mit ref- Parameter: lokale Variablen im Hauptprogramm müssen vor
             // dem Aufruf initialisiert werden
             // Folgende Zeile führt zu einem Fehler, da hohehe2 nicht initialisiert wurde
             //double abstand2 = 0, hoehe2; 
-            double abstand2 = 0, hoehe2 = 0; 
+            double abstand2 = 0, hoehe2;
+            hoehe2 = 99;
             Ctx.PolarToCartesianWithRef(r, phi, ref abstand2, ref hoehe2);
 
             Point pFlugzeug = new Point();

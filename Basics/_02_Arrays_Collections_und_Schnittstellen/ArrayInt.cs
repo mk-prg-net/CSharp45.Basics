@@ -27,6 +27,8 @@ namespace Basics
                 return _array[ix];
             }
 
+            // value ist versteckter Parameter des Setters
+            // void set(int value) {...}
             set
             {
                 _array[ix] = value;

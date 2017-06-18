@@ -20,11 +20,16 @@ namespace Basics.Test._01_Grundbausteine
 
         string EinteilenDerTypen(Flugzeugtyp ftyp)
         {
+            var meldung = "";
+
             switch (ftyp)
             {
                 case Flugzeugtyp.Ballon:
                 case Flugzeugtyp.Zeppelin:
-                    return "leichter als Luft";
+                    {
+                        meldung = "leichter als Luft";
+                    }
+                    break;
                 case Flugzeugtyp.Doppeldecker:
                 case Flugzeugtyp.Jumbojet:
                     return "schwerer als Luft";
@@ -33,6 +38,8 @@ namespace Basics.Test._01_Grundbausteine
                 default:
                     throw new Exception("Unbekannter Flugzeugtyp: " + ftyp.ToString());
             }
+
+            return meldung;
         }
 
         [TestMethod]
@@ -50,7 +57,9 @@ namespace Basics.Test._01_Grundbausteine
 
             int z = 1111;
             int Teiler = 2;
+
             for (; Teiler <= z - 1 && z % Teiler != 0; Teiler += 1);
+
             if (Teiler == z)
                 Debug.WriteLine(z.ToString() + " ist Primzahl");
             else
