@@ -90,7 +90,7 @@ namespace Basics.Test._05_Multithreading
         [TestMethod]
         public void _05_01_ThreadsMitParallelForEachTest()
         {
-            const long ende = 100000000;
+            const long ende = 10000000;
 
             Basics._04_Objektorientiert.StoppUhr st = new Basics._04_Objektorientiert.StoppUhr();
 
@@ -107,8 +107,25 @@ namespace Basics.Test._05_Multithreading
             
 
             Debug.WriteLine("Anz gefundener Primzahlen: " + anzPrim +  " Zeit: " + st.ZeitInMs());
-
         }
 
+
+
+        [TestMethod]        
+        public async void _05_01_AsyncAwait()
+        {
+            IEnumerable<long> primlist = null;
+
+            // hier wird ein Thread mit der Aufgabe gestartet, und nach dem Start kehrt die Funktion unmittelbar 
+            // zu Aufrufer zurück
+            await System.Threading.Tasks.Task.Run(() => primlist = mko.Algo.NumberTheory.PrimeFactors.scan(1, 10000000));
+
+            // Dieser Teil wird ers nach vollständiger bearbeitung dr im Thread gestarteten Aufgabe abgearbeitet
+            Debug.WriteLine("#Primzahlen: " + primlist.Count());
+        }
     }
+
+
+
+
 }

@@ -64,7 +64,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Basics._04_Objektorientiert.Astro.inMem.Galaxie" Collapsed="true">
+  <Class Name="Basics._04_Objektorientiert.Astro.inMem.Galaxie">
     <Position X="2.75" Y="8" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
@@ -74,7 +74,7 @@
       <FileName>_04_Objektorientiert\Astro\inMem\Galaxie.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Basics._04_Objektorientiert.Astro.inMem.GalaxieWithStrategie" Collapsed="true">
+  <Class Name="Basics._04_Objektorientiert.Astro.inMem.GalaxieWithStrategie">
     <Position X="4.5" Y="8" Width="2.25" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
@@ -105,8 +105,8 @@
       <FileName>_04_Objektorientiert\Astro\inMem\Stern.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Basics._04_Objektorientiert.Astro.inMem.Universum" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="10" Y="4" Width="1.75" />
+  <Class Name="Basics._04_Objektorientiert.Astro.inMem.Universum" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="2" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAgAQgAAAAAAIAAIQAEQAIAACQAQAAIQAAAAAAQAAA=</HashCode>
       <FileName>_04_Objektorientiert\Astro\inMem\Universum.cs</FileName>

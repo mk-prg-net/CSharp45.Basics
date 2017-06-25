@@ -43,6 +43,9 @@ namespace Basics._04_Objektorientiert.Astro.inMem
 {
     public class GalaxieFactory : IGalaxieFactory
     {
+
+        public GalaxieFactory() { }
+
         public IGalaxie Create(string Name)
         {
             return new Galaxie(Name);

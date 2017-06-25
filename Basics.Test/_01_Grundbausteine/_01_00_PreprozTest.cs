@@ -14,10 +14,14 @@ namespace Basics.Test._01_Grundbausteine
         [TestMethod]
         public void _01_00_PreProzTest1()
         {
+#if(DEBUG)
+
             // Zusätzliche Medien zur Aufzeichnung der Traceindfos definiert
             var txtList = new TextWriterTraceListener(@"Trace.txt");
             Debug.Listeners.Add(txtList);
             //Trace.Listeners.Add(txtList);
+
+#endif
 
             //Debug.AutoFlush = true;
             //Trace.AutoFlush = true;
