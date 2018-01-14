@@ -17,6 +17,16 @@ namespace Basics
         }
 
         /// <summary>
+        /// Copy- Konstruktor
+        /// </summary>
+        /// <param name="ori"></param>
+        public Point(Point ori)
+        {
+            X = ori.X;
+            Y = ori.Y;
+        }
+
+        /// <summary>
         /// 
         /// </summary>
         /// <param name="X"></param>

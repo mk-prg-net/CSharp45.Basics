@@ -60,6 +60,9 @@ namespace Basics.Test._02_Arrays_Collections_und_Schnittstellen
                 {
                     pSumme += p;
                 }
+
+                var _100_500 = Von1bis1000.Where(p => p > 100 && p < 500);
+                Debug.WriteLine(_100_500.Count().ToString());
             }
             catch (Exception ex)
             {

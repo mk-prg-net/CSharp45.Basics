@@ -27,7 +27,7 @@ namespace Basics._04_Objektorientiert.Autobahn
         protected void HupsignalAuslösen(int AnzHupsignale)
         {
             if (Hupen != null)
-                Hupen(AnzHupsignale);
+                Hupen.Invoke(AnzHupsignale);
         }
 
 
@@ -159,7 +159,8 @@ namespace Basics._04_Objektorientiert.Autobahn
 #endif
         }
 
-        // Destruktor: Wird Aufgerufen, wenn das Objekt durch den Garbage Collector im Speicher gelöscht wird
+        // Destruktor: Wird aufgerufen, wenn das Objekt durch den Garbage Collector im Speicher gelöscht wird
+        // Destrutor alias Object.Finalize()
         ~Auto()
         {
             System.Diagnostics.Debug.WriteLine(Marke + " Modell: " + Modell + " wird nach " + EntfernungVonStuttgartInKm + "km verschrottet");

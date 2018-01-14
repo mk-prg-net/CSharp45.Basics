@@ -16,7 +16,9 @@ namespace Basics.Test._02_Arrays_Collections_und_Schnittstellen
     }
 
 
-    // Moderne Lösung: Erweiterungsmethoden für versiegelte Klassen
+    //public class SuperSchlachtschiff : Schlachtschiff { }
+
+    //Moderne Lösung: Erweiterungsmethoden für versiegelte Klassen
     public static class SchlachtschiffExtensions
     {
         public static void schiesstAuf(this Schlachtschiff feuernde, Schlachtschiff befeuerte)

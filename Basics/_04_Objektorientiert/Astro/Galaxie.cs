@@ -42,7 +42,9 @@ using System.Threading.Tasks;
 namespace Basics._04_Objektorientiert.Astro
 {
     public abstract class Galaxie : IHimmelskörper, IGalaxie
-    {
+    {       
+
+
         public abstract string Name
         {
             get;

@@ -18,18 +18,17 @@ namespace Basics.Test
             Assert.AreEqual(DonaldsKonto.Guthaben, 150.0);
 
 
+            // Donald unter Beobachtung:
+            var DonaldObserver = new KontoMitProtokollDeko(DonaldsKonto);
+            DonaldObserver.einzahlen(100);
 
             // Donals Konto verzinsen lassen
-            var DonaldsSparkonto = new SparkontoDeko(DonaldsKonto);
+            var DonaldsSparkonto = new SparkontoDeko(DonaldObserver);
             DonaldsSparkonto.einzahlen(10);
 
             DonaldsSparkonto.verzinse(1, 0.10);
             Assert.AreEqual(DonaldsKonto.Guthaben, 176.0);
 
-
-            // Donald unter Beobachtung:
-            var DonaldObserver = new KontoMitProtokollDeko(DonaldsSparkonto);
-            DonaldObserver.einzahlen(100);
 
 
             var Drucker = new Protokolldrucker();

@@ -8,6 +8,12 @@ namespace Basics._04_Objektorientiert.Astro.inMem
 {
     public class Galaxie : Astro.Galaxie
     {
+
+        public Galaxie()
+        {
+            _Name = "Test";
+        }
+
         /// <summary>
         /// Konstruktor ist nur für Implementierung der Klassenfabriken in Universum- Klasse gedacht- 
         /// deshalb internal Modifikator

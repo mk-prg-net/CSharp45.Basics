@@ -139,6 +139,7 @@ namespace Basics._01_Grundbausteine
 
         public static void PolarToCartesianWithWithOutSPoint(double r, double phi_in_rad, out SPoint p)
         {
+            p = new SPoint();
             p.X = r * Math.Sin(phi_in_rad);
             p.Y = r * Math.Cos(phi_in_rad);
         }

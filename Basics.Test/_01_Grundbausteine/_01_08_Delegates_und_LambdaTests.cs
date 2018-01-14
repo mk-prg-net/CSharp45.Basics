@@ -116,8 +116,16 @@ namespace Basics.Test._01_Grundbausteine
             // Lambda- Ausdruck definieren, der entscheidet, ob eine Zahl durch 3 teilbar ist
             Func<int, bool> kriterium = prüfling => prüfling % 3 == 0;
 
+            // Klassisch, ohne Lambda- Ausdrücke
+            Func<int, bool> kriterium2 = new Func<int, bool>(IstDurch3Teilbar);
+
             Assert.IsTrue(kriterium(9));
             Assert.IsFalse(kriterium(7));
+        }
+
+        bool IstDurch3Teilbar(int prüfling)
+        {
+            return prüfling % 3 == 0;
         }
     }
 }

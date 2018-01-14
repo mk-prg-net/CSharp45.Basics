@@ -23,10 +23,15 @@ namespace Basics
         public SPoint(double X, double Y)
         {
             this.X = X;
-            this.Y = Y;           
+            this.Y = Y;
+            this.Description = "Hallo";
+            Description2 = "Welt";
         }
 
         public double X; // { get; set; }
         public double Y; // { get; set; }
+
+        public string Description;
+        public string Description2 { get; set; }
     }
 }

@@ -74,7 +74,6 @@ namespace Basics.Test._04_Objektorientiert
             else
             {
                 throw new Exception(mko.TraceHlp.FormatErrMsg("TestEx", "up3", "von ist größer als bis !"));
-
             }
         }
 

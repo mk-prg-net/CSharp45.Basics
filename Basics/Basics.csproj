@@ -228,12 +228,15 @@
     <None Include="Astro.cd" />
     <None Include="Astro2.cd" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram10.cd" />
     <None Include="ClassDiagram2.cd" />
     <None Include="ClassDiagram3.cd" />
     <None Include="ClassDiagram4.cd" />
     <None Include="ClassDiagram5.cd" />
     <None Include="ClassDiagram6.cd" />
     <None Include="ClassDiagram7.cd" />
+    <None Include="ClassDiagram8.cd" />
+    <None Include="ClassDiagram9.cd" />
     <None Include="DasSonnensystem.cd" />
     <None Include="MeinSchlüssel.snk" />
     <None Include="Mein_neuer_Schluessel.snk" />

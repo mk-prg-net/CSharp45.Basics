@@ -11,6 +11,7 @@ namespace Basics.Test._04_Objektorientiert
     {
         class C
         {
+            Object x;
             public static int anz_instanzen;
             public static double pi;
 
